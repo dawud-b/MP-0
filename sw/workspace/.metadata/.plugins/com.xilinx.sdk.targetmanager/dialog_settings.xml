@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Local" key="MP0_Design-target"/>
+	<item value="_ide/bitstream/mp0_wrapper.bit" key="MP0_Design-bitFile"/>
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248492833&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248492833-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248492833-23727093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="Auto Detect" key="MP0_Design-device"/>
+	<item value="MP0_Design" key="programfpga.sdxproject"/>
+	<item value="false" key="MP0_Design-skip_rev_check"/>
+	<item value="" key="MP0_Design-bmmFile"/>
+	<item value="false" key="MP0_Design-partial_bit"/>
+</section>

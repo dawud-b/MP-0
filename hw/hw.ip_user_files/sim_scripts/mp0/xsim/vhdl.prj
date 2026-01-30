@@ -1,0 +1,11 @@
+vhdl xil_defaultlib  \
+"../../../bd/mp0/ip/mp0_axi_gpio_0_0/sim/mp0_axi_gpio_0_0.vhd" \
+"../../../bd/mp0/ip/mp0_axi_gpio_0_1/sim/mp0_axi_gpio_0_1.vhd" \
+"../../../bd/mp0/ip/mp0_axi_gpio_0_2/sim/mp0_axi_gpio_0_2.vhd" \
+"../../../bd/mp0/ip/mp0_rst_ps7_0_100M_1/sim/mp0_rst_ps7_0_100M_1.vhd" \
+"../../../bd/mp0/ip/mp0_system_ila_0_0/bd_0/ip/ip_0/sim/bd_9b48_ila_lib_0.vhd" \
+"../../../bd/mp0/ip/mp0_system_ila_0_0/bd_0/sim/bd_9b48.vhd" \
+"../../../bd/mp0/ip/mp0_system_ila_0_0/sim/mp0_system_ila_0_0.vhd" \
+"../../../bd/mp0/sim/mp0.vhd" \
+
+nosort
