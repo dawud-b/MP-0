@@ -90,7 +90,10 @@ int main()
 
     	uint8_t buttons_change = new_buttons_inp ^ last_buttons_inp;
 
+    	int change = 0;
+
     	if (buttons_change != 0 && (new_buttons_inp & buttons_change)) { // button state toggled and it toggled to being pressed (and so it's not being depressed)
+    		change = 1;
     		switch (buttons_change) {
     		case BTNR_GPIO:
     			user_num >>= 1;
@@ -121,15 +124,22 @@ int main()
 
     	if (new_switches_inp ^ last_switches_inp) {
     		user_num = Xil_In32(XPAR_AXI_GPIO_2_BASEADDR) & 0xff;
+    		change = 1;
     		printf("Switches set to: %u\r\n", user_num);
     	}
 
     	last_switches_inp = new_switches_inp;
     	last_buttons_inp = new_buttons_inp;
 
+    	/*if (change) { // so to not trigger ILA all the time
+    		Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, user_num);
+    		Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, 0);
+    	}*/
 
-    	Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, user_num);
-    	usleep(100);
+		Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, user_num);
+
+    	change = 0;
+    	//usleep(100);
     }
 
 

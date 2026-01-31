@@ -8051,3 +8051,812 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-24: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:09:56.501
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-24: Launching Debugger_MP0_Design2-Default
+
+!ENTRY org.eclipse.tcf 4 0 2026-01-30 22:22:27.155
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2026-01-30 22:22:27.947
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:41.465
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss ], Thread: Worker-27: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:41.469
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-27: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:41.469
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Thread: Worker-27: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:41.469
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-27: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-01-30 22:35:41.469
+!MESSAGE Generating MD5 hash for file: C:\Users\zfsalti\488\MP-0\sw\wkspace\mp0_wrapper\export\mp0_wrapper\sw\mp0_wrapper\domain_ps7_cortexa9_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:41.469
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Thread: Worker-27: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:41.469
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-27: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:46.580
+!MESSAGE XSCT Command: [disconnect tcfchan#16], Thread: Thread-1341
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:46.583
+!MESSAGE XSCT command with result: [disconnect tcfchan#16], Result: [null, ]. Thread: Thread-1341
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.587
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.587
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.587
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.597
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.597
+!MESSAGE XSCT Command: [version -server], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.606
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.606
+!MESSAGE XSCT Command: [version], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.606
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.606
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.610
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.610
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.617
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.617
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.618
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.621
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.623
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.628
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.628
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.628
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.636
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.636
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.636
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.636
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.644
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.644
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.644
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.644
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.665
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.665
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.665
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.665
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.675
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.675
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248AA38DA" && level == 0}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.681
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248AA38DA" && level == 0}], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.681
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.684
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.697
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.697
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.697
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.770
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:47.770
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:50.777
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:50.785
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:50.791
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:50.792
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:50.799
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:50.800
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:50.822
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:50.822
+!MESSAGE XSCT Command: [fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.142
+!MESSAGE XSCT command with result: [fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.152
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.160
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.161
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.176
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, mp0_wrapper_1]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.176
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.177
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.177
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.181
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.181
+!MESSAGE XSCT Command: [source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.182
+!MESSAGE XSCT command with result: [source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.183
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.368
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.368
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.372
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.372
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.376
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.377
+!MESSAGE XSCT Command: [dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.535
+!MESSAGE XSCT command with result: [dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.536
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.567
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.623
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.627
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.628
+!MESSAGE XSCT Command: [con], Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:35:53.638
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-25: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:50.872
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss ], Thread: Worker-26: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:50.874
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-26: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:50.874
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Thread: Worker-26: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:50.877
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-26: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-01-30 22:38:50.877
+!MESSAGE Generating MD5 hash for file: C:\Users\zfsalti\488\MP-0\sw\wkspace\mp0_wrapper\export\mp0_wrapper\sw\mp0_wrapper\domain_ps7_cortexa9_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:50.879
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Thread: Worker-26: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:50.879
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-26: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:54.836
+!MESSAGE XSCT Command: [disconnect tcfchan#17], Thread: Thread-1399
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:54.839
+!MESSAGE XSCT command with result: [disconnect tcfchan#17], Result: [null, ]. Thread: Thread-1399
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.851
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.854
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#18]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.854
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.860
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.860
+!MESSAGE XSCT Command: [version -server], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.861
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.861
+!MESSAGE XSCT Command: [version], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.862
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.862
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.865
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.865
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.872
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.873
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.877
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.878
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.888
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.889
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.893
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.894
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.915
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.917
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.922
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.922
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.932
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.932
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.935
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.936
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.943
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.943
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.947
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.947
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.954
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.954
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248AA38DA" && level == 0}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.961
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248AA38DA" && level == 0}], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.961
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.962
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.963
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.969
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:55.969
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:56.043
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:56.043
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:59.054
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:59.061
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:59.065
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:59.066
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:59.072
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:59.073
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:59.085
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:38:59.085
+!MESSAGE XSCT Command: [fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.404
+!MESSAGE XSCT command with result: [fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.412
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.417
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.417
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.424
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, mp0_wrapper_1]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.424
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.425
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.425
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.429
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.429
+!MESSAGE XSCT Command: [source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.430
+!MESSAGE XSCT command with result: [source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.430
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.632
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.632
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.636
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.636
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.640
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.640
+!MESSAGE XSCT Command: [dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.800
+!MESSAGE XSCT command with result: [dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.801
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.822
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.890
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.895
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.896
+!MESSAGE XSCT Command: [con], Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:39:01.909
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-26: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:43.112
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss ], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:43.112
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:43.112
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:43.117
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-01-30 22:40:43.117
+!MESSAGE Generating MD5 hash for file: C:\Users\zfsalti\488\MP-0\sw\wkspace\mp0_wrapper\export\mp0_wrapper\sw\mp0_wrapper\domain_ps7_cortexa9_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:43.119
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:43.119
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/sw/mp0_wrapper/domain_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:53.250
+!MESSAGE XSCT Command: [disconnect tcfchan#18], Thread: Thread-1462
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:53.268
+!MESSAGE XSCT command with result: [disconnect tcfchan#18], Result: [null, ]. Thread: Thread-1462
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.275
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.277
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#19]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.278
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.293
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.293
+!MESSAGE XSCT Command: [version -server], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.294
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.295
+!MESSAGE XSCT Command: [version], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.295
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.295
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.298
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.298
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.305
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.305
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.308
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.308
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.314
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.315
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.317
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.318
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.324
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.324
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.327
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.327
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.334
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.335
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.338
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.338
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.344
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.345
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.347
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.348
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.354
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.355
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248AA38DA" && level == 0}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.361
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248AA38DA" && level == 0}], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.361
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.362
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.363
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.374
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.374
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.452
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:54.452
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:57.458
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:57.464
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:57.468
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248AA38DA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:57.468
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:57.475
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:57.475
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:57.487
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:57.488
+!MESSAGE XSCT Command: [fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.809
+!MESSAGE XSCT command with result: [fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.819
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.827
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.827
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.836
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, mp0_wrapper_1]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.836
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.837
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.837
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.841
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.841
+!MESSAGE XSCT Command: [source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.842
+!MESSAGE XSCT command with result: [source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:40:59.842
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.004
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.005
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.009
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.009
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.013
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.014
+!MESSAGE XSCT Command: [dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.181
+!MESSAGE XSCT command with result: [dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.182
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.202
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.260
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.265
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.265
+!MESSAGE XSCT Command: [con], Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:41:00.276
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-29: Launching Debugger_MP0_Design2-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:48:08.330
+!MESSAGE XSCT Command: [disconnect tcfchan#19], Thread: Thread-1519
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-30 22:48:08.330
+!MESSAGE XSCT command with result: [disconnect tcfchan#19], Result: [null, ]. Thread: Thread-1519

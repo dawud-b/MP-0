@@ -632,3 +632,237 @@ con
 
 21:48:26 INFO  : Launch script is exported to file 'C:\Users\zfsalti\488\MP-0\sw\wkspace\.sdk\launch_scripts\single_application_debug\debugger_mp0_design2-default.tcl'
 21:49:18 INFO  : Checking for BSP changes to sync application flags for project 'MP0_Design2'...
+21:49:42 INFO  : Disconnected from the channel tcfchan#14.
+21:49:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:49:43 INFO  : Jtag cable 'Digilent Zed 210248AA38DA' is selected.
+21:49:43 INFO  : 'jtag frequency' command is executed.
+21:49:43 INFO  : Context for 'APU' is selected.
+21:49:43 INFO  : System reset is completed.
+21:49:46 INFO  : 'after 3000' command is executed.
+21:49:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}' command is executed.
+21:49:49 INFO  : FPGA configured successfully with bitstream "C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit"
+21:49:49 INFO  : Context for 'APU' is selected.
+21:49:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa'.
+21:49:49 INFO  : 'configparams force-mem-access 1' command is executed.
+21:49:49 INFO  : Context for 'APU' is selected.
+21:49:49 INFO  : Sourcing of 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl' is done.
+21:49:49 INFO  : 'ps7_init' command is executed.
+21:49:49 INFO  : 'ps7_post_config' command is executed.
+21:49:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:49:49 INFO  : The application 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:49:49 INFO  : 'configparams force-mem-access 0' command is executed.
+21:49:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}
+fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:49:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:49:49 INFO  : 'con' command is executed.
+21:49:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:49:49 INFO  : Launch script is exported to file 'C:\Users\zfsalti\488\MP-0\sw\wkspace\.sdk\launch_scripts\single_application_debug\debugger_mp0_design2-default.tcl'
+22:09:49 INFO  : Disconnected from the channel tcfchan#15.
+22:09:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:09:50 INFO  : Jtag cable 'Digilent Zed 210248AA38DA' is selected.
+22:09:50 INFO  : 'jtag frequency' command is executed.
+22:09:50 INFO  : Context for 'APU' is selected.
+22:09:50 INFO  : System reset is completed.
+22:09:53 INFO  : 'after 3000' command is executed.
+22:09:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}' command is executed.
+22:09:56 INFO  : FPGA configured successfully with bitstream "C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit"
+22:09:56 INFO  : Context for 'APU' is selected.
+22:09:56 INFO  : Hardware design and registers information is loaded from 'C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa'.
+22:09:56 INFO  : 'configparams force-mem-access 1' command is executed.
+22:09:56 INFO  : Context for 'APU' is selected.
+22:09:56 INFO  : Sourcing of 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl' is done.
+22:09:56 INFO  : 'ps7_init' command is executed.
+22:09:56 INFO  : 'ps7_post_config' command is executed.
+22:09:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:56 INFO  : The application 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:09:56 INFO  : 'configparams force-mem-access 0' command is executed.
+22:09:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}
+fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:09:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:56 INFO  : 'con' command is executed.
+22:09:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:09:56 INFO  : Launch script is exported to file 'C:\Users\zfsalti\488\MP-0\sw\wkspace\.sdk\launch_scripts\single_application_debug\debugger_mp0_design2-default.tcl'
+22:35:41 INFO  : Checking for BSP changes to sync application flags for project 'MP0_Design2'...
+22:35:46 INFO  : Disconnected from the channel tcfchan#16.
+22:35:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:35:47 INFO  : Jtag cable 'Digilent Zed 210248AA38DA' is selected.
+22:35:47 INFO  : 'jtag frequency' command is executed.
+22:35:47 INFO  : Context for 'APU' is selected.
+22:35:47 INFO  : System reset is completed.
+22:35:50 INFO  : 'after 3000' command is executed.
+22:35:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}' command is executed.
+22:35:53 INFO  : FPGA configured successfully with bitstream "C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit"
+22:35:53 INFO  : Context for 'APU' is selected.
+22:35:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa'.
+22:35:53 INFO  : 'configparams force-mem-access 1' command is executed.
+22:35:53 INFO  : Context for 'APU' is selected.
+22:35:53 INFO  : Sourcing of 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl' is done.
+22:35:53 INFO  : 'ps7_init' command is executed.
+22:35:53 INFO  : 'ps7_post_config' command is executed.
+22:35:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:53 INFO  : The application 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:35:53 INFO  : 'configparams force-mem-access 0' command is executed.
+22:35:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}
+fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:35:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:53 INFO  : 'con' command is executed.
+22:35:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:35:53 INFO  : Launch script is exported to file 'C:\Users\zfsalti\488\MP-0\sw\wkspace\.sdk\launch_scripts\single_application_debug\debugger_mp0_design2-default.tcl'
+22:38:50 INFO  : Checking for BSP changes to sync application flags for project 'MP0_Design2'...
+22:38:54 INFO  : Disconnected from the channel tcfchan#17.
+22:38:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:38:55 INFO  : Jtag cable 'Digilent Zed 210248AA38DA' is selected.
+22:38:55 INFO  : 'jtag frequency' command is executed.
+22:38:55 INFO  : Context for 'APU' is selected.
+22:38:56 INFO  : System reset is completed.
+22:38:59 INFO  : 'after 3000' command is executed.
+22:38:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}' command is executed.
+22:39:01 INFO  : FPGA configured successfully with bitstream "C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit"
+22:39:01 INFO  : Context for 'APU' is selected.
+22:39:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa'.
+22:39:01 INFO  : 'configparams force-mem-access 1' command is executed.
+22:39:01 INFO  : Context for 'APU' is selected.
+22:39:01 INFO  : Sourcing of 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl' is done.
+22:39:01 INFO  : 'ps7_init' command is executed.
+22:39:01 INFO  : 'ps7_post_config' command is executed.
+22:39:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:39:01 INFO  : The application 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:39:01 INFO  : 'configparams force-mem-access 0' command is executed.
+22:39:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}
+fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:39:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:39:01 INFO  : 'con' command is executed.
+22:39:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:39:01 INFO  : Launch script is exported to file 'C:\Users\zfsalti\488\MP-0\sw\wkspace\.sdk\launch_scripts\single_application_debug\debugger_mp0_design2-default.tcl'
+22:40:43 INFO  : Checking for BSP changes to sync application flags for project 'MP0_Design2'...
+22:40:53 INFO  : Disconnected from the channel tcfchan#18.
+22:40:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:40:54 INFO  : Jtag cable 'Digilent Zed 210248AA38DA' is selected.
+22:40:54 INFO  : 'jtag frequency' command is executed.
+22:40:54 INFO  : Context for 'APU' is selected.
+22:40:54 INFO  : System reset is completed.
+22:40:57 INFO  : 'after 3000' command is executed.
+22:40:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}' command is executed.
+22:40:59 INFO  : FPGA configured successfully with bitstream "C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit"
+22:40:59 INFO  : Context for 'APU' is selected.
+22:40:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa'.
+22:40:59 INFO  : 'configparams force-mem-access 1' command is executed.
+22:40:59 INFO  : Context for 'APU' is selected.
+22:40:59 INFO  : Sourcing of 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl' is done.
+22:41:00 INFO  : 'ps7_init' command is executed.
+22:41:00 INFO  : 'ps7_post_config' command is executed.
+22:41:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:41:00 INFO  : The application 'C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:41:00 INFO  : 'configparams force-mem-access 0' command is executed.
+22:41:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA38DA" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA38DA-23727093-0"}
+fpga -file C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/bitstream/mp0_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/zfsalti/488/MP-0/sw/wkspace/mp0_wrapper/export/mp0_wrapper/hw/mp0_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/zfsalti/488/MP-0/sw/wkspace/MP0_Design2/Debug/MP0_Design2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:41:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:41:00 INFO  : 'con' command is executed.
+22:41:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:41:00 INFO  : Launch script is exported to file 'C:\Users\zfsalti\488\MP-0\sw\wkspace\.sdk\launch_scripts\single_application_debug\debugger_mp0_design2-default.tcl'
+22:48:08 INFO  : Disconnected from the channel tcfchan#19.
