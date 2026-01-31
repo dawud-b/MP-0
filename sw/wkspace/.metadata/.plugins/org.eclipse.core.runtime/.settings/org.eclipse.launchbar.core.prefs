@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_MP0_Design-Default
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_MP0_Design2-Default
 eclipse.preferences.version=1
-org.eclipse.launchbar.core.descriptorType.default\:Debugger_MP0_Design-Default/activeLaunchMode=embrun
-org.eclipse.launchbar.core.descriptorType.default\:Debugger_MP0_Design-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_MP0_Design2-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_MP0_Design2-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
