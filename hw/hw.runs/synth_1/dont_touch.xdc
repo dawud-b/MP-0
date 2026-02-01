@@ -37,16 +37,16 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_mem_int
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_clk_wiz_0_1/mp0_clk_wiz_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_clk_wiz_0_1 || ORIG_REF_NAME==mp0_clk_wiz_0_1} -quiet] -quiet
 
-# IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axis_subset_converter_0_1/mp0_axis_subset_converter_0_1.xci
+# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axis_subset_converter_0_1/mp0_axis_subset_converter_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axis_subset_converter_0_1 || ORIG_REF_NAME==mp0_axis_subset_converter_0_1} -quiet] -quiet
 
-# IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xlconstant_0_0/mp0_xlconstant_0_0.xci
+# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xlconstant_0_0/mp0_xlconstant_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_xlconstant_0_0 || ORIG_REF_NAME==mp0_xlconstant_0_0} -quiet] -quiet
 
-# IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_0/mp0_system_ila_1_0.xci
+# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_0/mp0_system_ila_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_system_ila_1_0 || ORIG_REF_NAME==mp0_system_ila_1_0} -quiet] -quiet
 
-# IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_rst_mp0_25M_0/mp0_rst_mp0_25M_0.xci
+# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_rst_mp0_25M_0/mp0_rst_mp0_25M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_rst_mp0_25M_0 || ORIG_REF_NAME==mp0_rst_mp0_25M_0} -quiet] -quiet
 
 # IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_auto_pc_0/mp0_auto_pc_0.xci

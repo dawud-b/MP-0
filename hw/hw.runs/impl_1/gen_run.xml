@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1769969029">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1769979948">
   <File Type="BITSTR-BMM" Name="mp0_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="mp0_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="mp0_wrapper_timing_summary_init.rpt"/>
@@ -132,4 +132,6 @@
   <BlockFileSet Type="BlockSrcs" Name="mp0_rst_mp0_25M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_axi_vdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_clk_wiz_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_system_ila_0_0"/>
 </GenRun>

@@ -132,13 +132,13 @@
             "value": "TRUE"
           },
           "ALL_PROBE_SAME_MU_CNT": {
-            "value": "1"
+            "value": "4"
           },
           "C_ADV_TRIGGER": {
             "value": "FALSE"
           },
           "C_DATA_DEPTH": {
-            "value": "1024"
+            "value": "4096"
           },
           "C_EN_STRG_QUAL": {
             "value": "0"

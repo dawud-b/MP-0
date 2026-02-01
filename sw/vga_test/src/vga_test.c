@@ -20,24 +20,26 @@
 #include "platform.h"
 #include "xparameters.h"
 #include "xil_cache.h"
-#include "xvtc.h"
+//#include "xvtc.h"
 #include "xaxivdma.h"
+#include <xil_io.h>
 
-
-u16 test_image[480][640];
+u16 test_image[480][640] __attribute__((aligned(64)));
 
 int main() {
 
-	XVtc Vtc;
-    XVtc_Config *VtcCfgPtr;
+	printf("%p\r\n", test_image);
+
+	//XVtc Vtc;
+    //XVtc_Config *VtcCfgPtr;
 
     int i, j;
 
 
     // Enable VTC module: Using high-level functions provided by Vendor
-    VtcCfgPtr = XVtc_LookupConfig(XPAR_AXI_VDMA_0_DEVICE_ID);
-    XVtc_CfgInitialize(&Vtc, VtcCfgPtr, VtcCfgPtr->BaseAddress);
-    XVtc_EnableGenerator(&Vtc);
+    //VtcCfgPtr = XVtc_LookupConfig(XPAR_AXI_VDMA_0_DEVICE_ID);
+    //XVtc_CfgInitialize(&Vtc, VtcCfgPtr, VtcCfgPtr->BaseAddress);
+    //XVtc_EnableGenerator(&Vtc);
 
     // Challenge: Can you rewrite the Enable VTC module code by directly accessing
     // the VTC registers using pointers?  (See VTC data sheet, and xparameters.h)
@@ -49,18 +51,25 @@ int main() {
     // Initialize Test image for VDMA transfer to VGA monitor
     for (i = 0; i < 480; i++) {
       for (j = 0; j < 640; j++) {
-
-        if (j < 213) {
+    	//if (j == 0)
+    		//test_image[i][j] = 0xBEEF;
+    	if (j < 213) {
           test_image[i][j] = 0x000F; // red pixels
         }
         else if(j < 426 ) {
           test_image[i][j] = 0x00F0; // green pixels
         }
+        else if (i == 479 && j == 639)
+        	test_image[i][j] = 0xBEFE;
+        else if (j == 639)
+        	test_image[i][j] = 0xBFFF;
         else {
           test_image[i][j] = 0x0F00; // blue pixels
         }
-
       }
+
+
+
     }
 
 	// Make sure Display information gets flushed from cache to DDR Memory
@@ -72,11 +81,12 @@ int main() {
     // Simple function abstraction by Vendor for writing VDMA registers
     // RS set to start and Circular_Park set to circular mode
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_CR_OFFSET,  0b11);  // Read Channel: VDMA MM2S Circular Mode and Start bits set, VDMA MM2S Control
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_HI_FRMBUF_OFFSET, );  // Read Channel: VDMA MM2S Reg_Index
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_START_ADDR_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S Frame buffer Start Addr 1
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_STRD_FRMDLY_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S FRM_Delay, and Stride
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S HSIZE
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_HI_FRMBUF_OFFSET, 0);  // Read Channel: VDMA MM2S Reg_Index
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_START_ADDR_OFFSET, test_image);  // Read Channel: VDMA MM2S Frame buffer Start Addr 1
+    // stride 640 * 2.
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_STRD_FRMDLY_OFFSET, 640*2);  // Read Channel: VDMA MM2S FRM_Delay, and Stride
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, 640*2);  // Read Channel: VDMA MM2S HSIZE
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, 480);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
 
 
     // Low-level register acess using pointers
@@ -92,7 +102,7 @@ int main() {
 
 	
 	
-	
+	print("Here\r\n");
 	
 	
     ////////////////////////////////////////////////////////////////
