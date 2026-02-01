@@ -56,6 +56,12 @@ USE ieee.numeric_std.ALL;
 ENTITY mp0_system_ila_1_0 IS
   PORT (
     clk : IN STD_LOGIC;
+    probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe5 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     SLOT_0_AXIS_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     SLOT_0_AXIS_tkeep : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     SLOT_0_AXIS_tlast : IN STD_LOGIC;
@@ -72,6 +78,12 @@ ARCHITECTURE mp0_system_ila_1_0_arch OF mp0_system_ila_1_0 IS
   COMPONENT bd_5b19 IS
     PORT (
       clk : IN STD_LOGIC;
+      probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe5 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       SLOT_0_AXIS_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       SLOT_0_AXIS_tkeep : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       SLOT_0_AXIS_tlast : IN STD_LOGIC;
@@ -98,6 +110,12 @@ BEGIN
   U0 : bd_5b19
     PORT MAP (
       clk => clk,
+      probe0 => probe0,
+      probe1 => probe1,
+      probe2 => probe2,
+      probe3 => probe3,
+      probe4 => probe4,
+      probe5 => probe5,
       SLOT_0_AXIS_tdata => SLOT_0_AXIS_tdata,
       SLOT_0_AXIS_tkeep => SLOT_0_AXIS_tkeep,
       SLOT_0_AXIS_tlast => SLOT_0_AXIS_tlast,

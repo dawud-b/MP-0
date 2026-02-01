@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 -- Date        : Sun Feb  1 15:06:11 2026
 -- Host        : CO2041-06 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_rst_ps7_0_100M_1/mp0_rst_ps7_0_100M_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mp0_rst_ps7_0_100M_1 -prefix
+--               mp0_rst_ps7_0_100M_1_ mp0_rst_ps7_0_100M_1_sim_netlist.vhdl
 -- Design      : mp0_rst_ps7_0_100M_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity mp0_rst_ps7_0_100M_1_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp0_rst_ps7_0_100M_1_cdc_sync : entity is "cdc_sync";
 end mp0_rst_ps7_0_100M_1_cdc_sync;
 
 architecture STRUCTURE of mp0_rst_ps7_0_100M_1_cdc_sync is
@@ -237,8 +235,6 @@ entity mp0_rst_ps7_0_100M_1_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp0_rst_ps7_0_100M_1_upcnt_n : entity is "upcnt_n";
 end mp0_rst_ps7_0_100M_1_upcnt_n;
 
 architecture STRUCTURE of mp0_rst_ps7_0_100M_1_upcnt_n is
@@ -403,8 +399,6 @@ entity mp0_rst_ps7_0_100M_1_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp0_rst_ps7_0_100M_1_lpf : entity is "lpf";
 end mp0_rst_ps7_0_100M_1_lpf;
 
 architecture STRUCTURE of mp0_rst_ps7_0_100M_1_lpf is
@@ -591,8 +585,6 @@ entity mp0_rst_ps7_0_100M_1_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp0_rst_ps7_0_100M_1_sequence_psr : entity is "sequence_psr";
 end mp0_rst_ps7_0_100M_1_sequence_psr;
 
 architecture STRUCTURE of mp0_rst_ps7_0_100M_1_sequence_psr is
@@ -931,8 +923,6 @@ entity mp0_rst_ps7_0_100M_1_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of mp0_rst_ps7_0_100M_1_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of mp0_rst_ps7_0_100M_1_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp0_rst_ps7_0_100M_1_proc_sys_reset : entity is "proc_sys_reset";
 end mp0_rst_ps7_0_100M_1_proc_sys_reset;
 
 architecture STRUCTURE of mp0_rst_ps7_0_100M_1_proc_sys_reset is

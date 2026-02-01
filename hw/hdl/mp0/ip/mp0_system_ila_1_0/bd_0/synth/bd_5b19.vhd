@@ -17,6 +17,12 @@ entity bd_5b19 is
     SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_0_AXIS_tvalid : in STD_LOGIC;
     clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
     resetn : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
@@ -29,12 +35,18 @@ architecture STRUCTURE of bd_5b19 is
   component bd_5b19_ila_lib_0 is
   port (
     clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 )
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe10 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component bd_5b19_ila_lib_0;
   component bd_5b19_g_inst_0 is
@@ -68,6 +80,12 @@ architecture STRUCTURE of bd_5b19 is
   signal net_slot_0_axis_tready : STD_LOGIC;
   signal net_slot_0_axis_tuser : STD_LOGIC_VECTOR ( 0 to 0 );
   signal net_slot_0_axis_tvalid : STD_LOGIC;
+  signal probe0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal probe1_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal probe2_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal probe3_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal probe4_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal probe5_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal resetn_1 : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of SLOT_0_AXIS_tlast : signal is "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TLAST";
@@ -90,6 +108,12 @@ begin
   Conn_TUSER(0) <= SLOT_0_AXIS_tuser(0);
   Conn_TVALID <= SLOT_0_AXIS_tvalid;
   clk_1 <= clk;
+  probe0_1(0) <= probe0(0);
+  probe1_1(0) <= probe1(0);
+  probe2_1(0) <= probe2(0);
+  probe3_1(0) <= probe3(0);
+  probe4_1(0) <= probe4(0);
+  probe5_1(0) <= probe5(0);
   resetn_1 <= resetn;
 g_inst: component bd_5b19_g_inst_0
      port map (
@@ -111,11 +135,17 @@ g_inst: component bd_5b19_g_inst_0
 ila_lib: component bd_5b19_ila_lib_0
      port map (
       clk => clk_1,
-      probe0(15 downto 0) => net_slot_0_axis_tdata(15 downto 0),
-      probe1(1 downto 0) => net_slot_0_axis_tkeep(1 downto 0),
-      probe2(0) => net_slot_0_axis_tuser(0),
-      probe3(0) => net_slot_0_axis_tvalid,
-      probe4(0) => net_slot_0_axis_tready,
-      probe5(0) => net_slot_0_axis_tlast
+      probe0(0) => probe0_1(0),
+      probe1(0) => probe1_1(0),
+      probe10(0) => net_slot_0_axis_tready,
+      probe11(0) => net_slot_0_axis_tlast,
+      probe2(0) => probe2_1(0),
+      probe3(0) => probe3_1(0),
+      probe4(0) => probe4_1(0),
+      probe5(0) => probe5_1(0),
+      probe6(15 downto 0) => net_slot_0_axis_tdata(15 downto 0),
+      probe7(1 downto 0) => net_slot_0_axis_tkeep(1 downto 0),
+      probe8(0) => net_slot_0_axis_tuser(0),
+      probe9(0) => net_slot_0_axis_tvalid
     );
 end STRUCTURE;
