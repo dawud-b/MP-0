@@ -81,7 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/zfsalti/488/MP-0/hw/hw.cache/wt [current_project]
 set_property parent.project_path C:/Users/zfsalti/488/MP-0/hw/hw.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -89,7 +89,7 @@ set_property ip_output_repo c:/Users/zfsalti/488/MP-0/hw/hw.cache/ip [current_pr
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xbar_0/mp0_xbar_0.xci
+read_ip -quiet C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xbar_0/mp0_xbar_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xbar_0/mp0_xbar_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

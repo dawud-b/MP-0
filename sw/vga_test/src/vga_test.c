@@ -70,8 +70,9 @@ int main() {
 	#define CHANGE_ME 0
 
     // Simple function abstraction by Vendor for writing VDMA registers
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_CR_OFFSET,  CHANGE_ME);  // Read Channel: VDMA MM2S Circular Mode and Start bits set, VDMA MM2S Control
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_HI_FRMBUF_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S Reg_Index
+    // RS set to start and Circular_Park set to circular mode
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_CR_OFFSET,  0b11);  // Read Channel: VDMA MM2S Circular Mode and Start bits set, VDMA MM2S Control
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_HI_FRMBUF_OFFSET, );  // Read Channel: VDMA MM2S Reg_Index
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_START_ADDR_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S Frame buffer Start Addr 1
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_STRD_FRMDLY_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S FRM_Delay, and Stride
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S HSIZE

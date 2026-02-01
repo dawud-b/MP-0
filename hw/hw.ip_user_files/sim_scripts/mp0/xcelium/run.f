@@ -11,6 +11,7 @@
 -endlib
 -makelib xcelium_lib/xpm -sv \
   "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
   "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib xcelium_lib/xpm \
@@ -74,14 +75,7 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/mp0/ip/mp0_rst_ps7_0_100M_1/sim/mp0_rst_ps7_0_100M_1.vhd" \
--endlib
--makelib xcelium_lib/axi_protocol_converter_v2_1_21 \
-  "../../../../hdl/mp0/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/mp0/ip/mp0_auto_pc_0/sim/mp0_auto_pc_0.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mp0/ip/mp0_system_ila_0_0/bd_0/sim/bd_9b48.vhd" \
   "../../../bd/mp0/ip/mp0_system_ila_0_0/bd_0/ip/ip_0/sim/bd_9b48_ila_lib_0.vhd" \
 -endlib
 -makelib xcelium_lib/gigantic_mux \
@@ -102,9 +96,46 @@
   "../../../bd/mp0/ip/mp0_system_ila_0_0/bd_0/ip/ip_6/sim/bd_9b48_slot_0_r_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/mp0/ip/mp0_system_ila_0_0/bd_0/sim/bd_9b48.vhd" \
   "../../../bd/mp0/ip/mp0_system_ila_0_0/sim/mp0_system_ila_0_0.vhd" \
   "../../../bd/mp0/sim/mp0.vhd" \
+-endlib
+-makelib xcelium_lib/lib_pkg_v1_0_2 \
+  "../../../../hdl/mp0/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/lib_fifo_v1_0_14 \
+  "../../../../hdl/mp0/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/blk_mem_gen_v8_4_4 \
+  "../../../../hdl/mp0/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib xcelium_lib/lib_bmg_v1_0_13 \
+  "../../../../hdl/mp0/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/lib_srl_fifo_v1_0_2 \
+  "../../../../hdl/mp0/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/axi_datamover_v5_1_23 \
+  "../../../../hdl/mp0/ipshared/af86/hdl/axi_datamover_v5_1_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/axi_vdma_v6_3_9 \
+  "../../../../hdl/mp0/ipshared/7af1/hdl/axi_vdma_v6_3_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_vdma_v6_3_9 \
+  "../../../../hdl/mp0/ipshared/7af1/hdl/axi_vdma_v6_3_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mp0/ip/mp0_axi_vdma_0_0/sim/mp0_axi_vdma_0_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mp0/ip/mp0_clk_wiz_0_1/mp0_clk_wiz_0_1_clk_wiz.v" \
+  "../../../bd/mp0/ip/mp0_clk_wiz_0_1/mp0_clk_wiz_0_1.v" \
+-endlib
+-makelib xcelium_lib/axi_protocol_converter_v2_1_21 \
+  "../../../../hdl/mp0/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mp0/ip/mp0_auto_pc_0/sim/mp0_auto_pc_0.v" \
+  "../../../bd/mp0/ip/mp0_auto_pc_1/sim/mp0_auto_pc_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v
