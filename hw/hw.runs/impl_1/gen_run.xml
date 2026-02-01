@@ -16,9 +16,12 @@
   <File Type="BITSTR-BMM" Name="mp0_wrapper_bd.bmm"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="mp0_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MMI" Name="mp0_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mp0_wrapper_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="mp0_wrapper.sysdef"/>
+  <File Type="ROUTE-DRC-RPX" Name="mp0_wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="mp0_wrapper.ltx"/>
+  <File Type="RCFI_FILE" Name="mp0_wrapper.rcfi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="mp0_wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="mp0_wrapper.hwdef"/>
@@ -48,11 +51,8 @@
   <File Type="PHYSOPT-DCP" Name="mp0_wrapper_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="mp0_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mp0_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mp0_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="mp0_wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mp0_wrapper_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="mp0_wrapper.pdi"/>
-  <File Type="RCFI_FILE" Name="mp0_wrapper.rcfi"/>
   <File Type="CFI_FILE" Name="mp0_wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="mp0_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="mp0_wrapper.npi"/>
@@ -103,12 +103,12 @@
     <Step Id="write_bitstream"/>
     <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="mp0_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mp0_axi_gpio_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mp0_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_system_ila_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mp0_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_axi_gpio_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_rst_ps7_0_100M_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_xbar_0"/>
 </GenRun>

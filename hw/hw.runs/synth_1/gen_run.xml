@@ -43,12 +43,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="mp0_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mp0_axi_gpio_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mp0_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_system_ila_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mp0_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_axi_gpio_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="mp0_rst_ps7_0_100M_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="mp0_xbar_0"/>
 </GenRun>
