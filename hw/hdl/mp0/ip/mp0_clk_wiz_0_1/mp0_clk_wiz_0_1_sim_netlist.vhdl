@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 -- Date        : Sun Feb  1 17:20:57 2026
 -- Host        : CO2041-06 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_clk_wiz_0_1/mp0_clk_wiz_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mp0_clk_wiz_0_1 -prefix
+--               mp0_clk_wiz_0_1_ mp0_clk_wiz_0_1_sim_netlist.vhdl
 -- Design      : mp0_clk_wiz_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz is
     clk_out1 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz : entity is "mp0_clk_wiz_0_1_clk_wiz";
 end mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz;
 
 architecture STRUCTURE of mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz is

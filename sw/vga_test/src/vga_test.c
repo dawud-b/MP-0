@@ -20,7 +20,7 @@
 #include "platform.h"
 #include "xparameters.h"
 #include "xil_cache.h"
-//#include "xvtc.h"
+#include "xvtc.h"
 #include "xaxivdma.h"
 #include <xil_io.h>
 
@@ -30,16 +30,16 @@ int main() {
 
 	printf("%p\r\n", test_image);
 
-	//XVtc Vtc;
-    //XVtc_Config *VtcCfgPtr;
+	XVtc Vtc;
+    XVtc_Config *VtcCfgPtr;
 
     int i, j;
 
 
     // Enable VTC module: Using high-level functions provided by Vendor
-    //VtcCfgPtr = XVtc_LookupConfig(XPAR_AXI_VDMA_0_DEVICE_ID);
-    //XVtc_CfgInitialize(&Vtc, VtcCfgPtr, VtcCfgPtr->BaseAddress);
-    //XVtc_EnableGenerator(&Vtc);
+    VtcCfgPtr = XVtc_LookupConfig(XPAR_AXI_VDMA_0_DEVICE_ID);
+    XVtc_CfgInitialize(&Vtc, VtcCfgPtr, VtcCfgPtr->BaseAddress);
+    XVtc_EnableGenerator(&Vtc);
 
     // Challenge: Can you rewrite the Enable VTC module code by directly accessing
     // the VTC registers using pointers?  (See VTC data sheet, and xparameters.h)

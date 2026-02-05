@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 -- Date        : Sun Feb  1 17:20:57 2026
 -- Host        : CO2041-06 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_clk_wiz_0_1/mp0_clk_wiz_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mp0_clk_wiz_0_1 -prefix
+--               mp0_clk_wiz_0_1_ mp0_clk_wiz_0_1_stub.vhdl
 -- Design      : mp0_clk_wiz_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

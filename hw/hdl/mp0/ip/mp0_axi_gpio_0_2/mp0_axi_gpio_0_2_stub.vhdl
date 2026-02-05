@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 -- Date        : Sun Feb  1 17:20:58 2026
 -- Host        : CO2041-06 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_gpio_0_2/mp0_axi_gpio_0_2_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mp0_axi_gpio_0_2 -prefix
+--               mp0_axi_gpio_0_2_ mp0_axi_gpio_0_2_stub.vhdl
 -- Design      : mp0_axi_gpio_0_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

@@ -78,7 +78,6 @@ ENTITY mp0_axi_vdma_0_0 IS
     s_axi_lite_rready : IN STD_LOGIC;
     s_axi_lite_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi_lite_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    mm2s_fsync : IN STD_LOGIC;
     mm2s_frame_ptr_out : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
     m_axi_mm2s_araddr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axi_mm2s_arlen : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -299,7 +298,6 @@ ARCHITECTURE mp0_axi_vdma_0_0_arch OF mp0_axi_vdma_0_0 IS
 "WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mm2s_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MM2S ARADDR";
   ATTRIBUTE X_INTERFACE_INFO OF mm2s_frame_ptr_out: SIGNAL IS "xilinx.com:signal:video_frame_ptr:1.0 MM2S_FRAME_PTR_OUT FRAME_PTR";
-  ATTRIBUTE X_INTERFACE_INFO OF mm2s_fsync: SIGNAL IS "xilinx.com:signal:video_frame_sync:1.0 MM2S_FSYNC FRAME_SYNC";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_lite_rresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_LITE RRESP";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_lite_rdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_LITE RDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_lite_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_LITE RREADY";
@@ -337,7 +335,7 @@ BEGIN
       C_DYNAMIC_RESOLUTION => 1,
       C_NUM_FSTORES => 1,
       C_USE_FSYNC => 1,
-      C_USE_MM2S_FSYNC => 1,
+      C_USE_MM2S_FSYNC => 0,
       C_USE_S2MM_FSYNC => 2,
       C_FLUSH_ON_FSYNC => 1,
       C_INCLUDE_INTERNAL_GENLOCK => 1,
@@ -418,7 +416,7 @@ BEGIN
       s_axi_lite_rready => s_axi_lite_rready,
       s_axi_lite_rdata => s_axi_lite_rdata,
       s_axi_lite_rresp => s_axi_lite_rresp,
-      mm2s_fsync => mm2s_fsync,
+      mm2s_fsync => '0',
       mm2s_frame_ptr_in => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 6)),
       mm2s_frame_ptr_out => mm2s_frame_ptr_out,
       s2mm_fsync => '0',

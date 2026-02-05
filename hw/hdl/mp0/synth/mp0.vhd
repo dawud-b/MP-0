@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sun Feb  1 17:20:22 2026
+--Date        : Thu Feb  5 15:04:25 2026
 --Host        : CO2041-06 running 64-bit major release  (build 9200)
 --Command     : generate_target mp0.bd
 --Design      : mp0
@@ -2125,7 +2125,7 @@ entity mp0 is
     sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mp0 : entity is "mp0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mp0,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=17,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,da_board_cnt=8,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of mp0 : entity is "mp0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mp0,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=25,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,da_board_cnt=8,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of mp0 : entity is "mp0.hwdef";
 end mp0;
@@ -2382,7 +2382,6 @@ architecture STRUCTURE of mp0 is
     s_axi_lite_rready : in STD_LOGIC;
     s_axi_lite_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_lite_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    mm2s_fsync : in STD_LOGIC;
     mm2s_frame_ptr_out : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m_axi_mm2s_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_mm2s_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -2412,47 +2411,6 @@ architecture STRUCTURE of mp0 is
     clk_out1 : out STD_LOGIC
   );
   end component mp0_clk_wiz_0_1;
-  component mp0_axis_subset_converter_0_1 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
-    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axis_tlast : out STD_LOGIC;
-    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component mp0_axis_subset_converter_0_1;
-  component mp0_xlconstant_0_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component mp0_xlconstant_0_0;
-  component mp0_system_ila_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    SLOT_0_AXIS_tkeep : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    SLOT_0_AXIS_tlast : in STD_LOGIC;
-    SLOT_0_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_0_AXIS_tvalid : in STD_LOGIC;
-    SLOT_0_AXIS_tready : in STD_LOGIC;
-    resetn : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component mp0_system_ila_1_0;
   component mp0_rst_mp0_25M_0 is
   port (
     slowest_sync_clk : in STD_LOGIC;
@@ -2467,6 +2425,11 @@ architecture STRUCTURE of mp0 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component mp0_rst_mp0_25M_0;
+  component mp0_xlconstant_0_1 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component mp0_xlconstant_0_1;
   component mp0_v_tc_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -2503,20 +2466,73 @@ architecture STRUCTURE of mp0 is
     fsync_out : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component mp0_v_tc_0_0;
-  component mp0_xlconstant_0_1 is
+  component mp0_v_axi4s_vid_out_0_0 is
   port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+    aclk : in STD_LOGIC;
+    aclken : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    s_axis_video_tdata : in STD_LOGIC_VECTOR ( 39 downto 0 );
+    s_axis_video_tvalid : in STD_LOGIC;
+    s_axis_video_tready : out STD_LOGIC;
+    s_axis_video_tuser : in STD_LOGIC;
+    s_axis_video_tlast : in STD_LOGIC;
+    fid : in STD_LOGIC;
+    vid_io_out_ce : in STD_LOGIC;
+    vid_active_video : out STD_LOGIC;
+    vid_vsync : out STD_LOGIC;
+    vid_hsync : out STD_LOGIC;
+    vid_vblank : out STD_LOGIC;
+    vid_hblank : out STD_LOGIC;
+    vid_field_id : out STD_LOGIC;
+    vid_data : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    vtg_vsync : in STD_LOGIC;
+    vtg_hsync : in STD_LOGIC;
+    vtg_vblank : in STD_LOGIC;
+    vtg_hblank : in STD_LOGIC;
+    vtg_active_video : in STD_LOGIC;
+    vtg_field_id : in STD_LOGIC;
+    vtg_ce : out STD_LOGIC;
+    locked : out STD_LOGIC;
+    overflow : out STD_LOGIC;
+    underflow : out STD_LOGIC;
+    fifo_read_level : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    status : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  end component mp0_xlconstant_0_1;
-  signal active_video_out : STD_LOGIC;
-  attribute DEBUG : string;
-  attribute DEBUG of active_video_out : signal is "true";
-  attribute MARK_DEBUG : boolean;
-  attribute MARK_DEBUG of active_video_out : signal is std.standard.true;
+  end component mp0_v_axi4s_vid_out_0_0;
+  component mp0_system_ila_1_1 is
+  port (
+    clk : in STD_LOGIC;
+    SLOT_0_VIDEO_TIMING_active_video : in STD_LOGIC;
+    SLOT_0_VIDEO_TIMING_hblank : in STD_LOGIC;
+    SLOT_0_VIDEO_TIMING_vblank : in STD_LOGIC;
+    SLOT_0_VIDEO_TIMING_hsync : in STD_LOGIC;
+    SLOT_0_VIDEO_TIMING_vsync : in STD_LOGIC;
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    SLOT_1_AXIS_tkeep : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    SLOT_1_AXIS_tlast : in STD_LOGIC;
+    SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_1_AXIS_tvalid : in STD_LOGIC;
+    SLOT_1_AXIS_tready : in STD_LOGIC;
+    resetn : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 35 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe10 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component mp0_system_ila_1_1;
   signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute CONN_BUS_INFO : string;
   attribute CONN_BUS_INFO of axi_gpio_0_GPIO_TRI_O : signal is "axi_gpio_0_GPIO xilinx.com:interface:gpio:1.0 None TRI_O";
+  attribute DEBUG : string;
   attribute DEBUG of axi_gpio_0_GPIO_TRI_O : signal is "true";
+  attribute MARK_DEBUG : boolean;
   attribute MARK_DEBUG of axi_gpio_0_GPIO_TRI_O : signal is std.standard.true;
   signal axi_gpio_1_GPIO_TRI_I : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal axi_gpio_2_GPIO_TRI_I : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -2573,15 +2589,6 @@ architecture STRUCTURE of mp0 is
   signal axi_vdma_0_M_AXI_MM2S_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_vdma_0_M_AXI_MM2S_RVALID : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
-  signal fsync_out : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute DEBUG of fsync_out : signal is "true";
-  attribute MARK_DEBUG of fsync_out : signal is std.standard.true;
-  signal hblank_out : STD_LOGIC;
-  attribute DEBUG of hblank_out : signal is "true";
-  attribute MARK_DEBUG of hblank_out : signal is std.standard.true;
-  signal hsync_out : STD_LOGIC;
-  attribute DEBUG of hsync_out : signal is "true";
-  attribute MARK_DEBUG of hsync_out : signal is std.standard.true;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -2788,21 +2795,40 @@ architecture STRUCTURE of mp0 is
   signal ps7_0_axi_periph_M04_AXI_WVALID : STD_LOGIC;
   signal rst_mp0_25M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal vblank_out : STD_LOGIC;
-  attribute DEBUG of vblank_out : signal is "true";
-  attribute MARK_DEBUG of vblank_out : signal is std.standard.true;
-  signal vsync_out : STD_LOGIC;
-  attribute DEBUG of vsync_out : signal is "true";
-  attribute MARK_DEBUG of vsync_out : signal is std.standard.true;
-  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal v_axi4s_vid_out_0_locked : STD_LOGIC;
+  signal v_axi4s_vid_out_0_overflow : STD_LOGIC;
+  signal v_axi4s_vid_out_0_underflow : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_active_video : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_data : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal v_axi4s_vid_out_0_vid_field_id : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_hblank : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_hsync : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_vblank : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_vsync : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vtg_ce : STD_LOGIC;
+  signal v_tc_0_vtiming_out_ACTIVE_VIDEO : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_tc_0_vtiming_out_ACTIVE_VIDEO : signal is "v_tc_0_vtiming_out xilinx.com:interface:video_timing:2.0 None ACTIVE_VIDEO";
+  attribute DEBUG of v_tc_0_vtiming_out_ACTIVE_VIDEO : signal is "true";
+  attribute MARK_DEBUG of v_tc_0_vtiming_out_ACTIVE_VIDEO : signal is std.standard.true;
+  signal v_tc_0_vtiming_out_HBLANK : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_tc_0_vtiming_out_HBLANK : signal is "v_tc_0_vtiming_out xilinx.com:interface:video_timing:2.0 None HBLANK";
+  attribute DEBUG of v_tc_0_vtiming_out_HBLANK : signal is "true";
+  attribute MARK_DEBUG of v_tc_0_vtiming_out_HBLANK : signal is std.standard.true;
+  signal v_tc_0_vtiming_out_HSYNC : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_tc_0_vtiming_out_HSYNC : signal is "v_tc_0_vtiming_out xilinx.com:interface:video_timing:2.0 None HSYNC";
+  attribute DEBUG of v_tc_0_vtiming_out_HSYNC : signal is "true";
+  attribute MARK_DEBUG of v_tc_0_vtiming_out_HSYNC : signal is std.standard.true;
+  signal v_tc_0_vtiming_out_VBLANK : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_tc_0_vtiming_out_VBLANK : signal is "v_tc_0_vtiming_out xilinx.com:interface:video_timing:2.0 None VBLANK";
+  attribute DEBUG of v_tc_0_vtiming_out_VBLANK : signal is "true";
+  attribute MARK_DEBUG of v_tc_0_vtiming_out_VBLANK : signal is std.standard.true;
+  signal v_tc_0_vtiming_out_VSYNC : STD_LOGIC;
+  attribute CONN_BUS_INFO of v_tc_0_vtiming_out_VSYNC : signal is "v_tc_0_vtiming_out xilinx.com:interface:video_timing:2.0 None VSYNC";
+  attribute DEBUG of v_tc_0_vtiming_out_VSYNC : signal is "true";
+  attribute MARK_DEBUG of v_tc_0_vtiming_out_VSYNC : signal is std.standard.true;
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_vdma_0_mm2s_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal NLW_axis_subset_converter_0_m_axis_tlast_UNCONNECTED : STD_LOGIC;
-  signal NLW_axis_subset_converter_0_m_axis_tvalid_UNCONNECTED : STD_LOGIC;
-  signal NLW_axis_subset_converter_0_m_axis_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_axis_subset_converter_0_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_axis_subset_converter_0_m_axis_tuser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_AWREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_HP0_BVALID_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_HP0_WREADY_UNCONNECTED : STD_LOGIC;
@@ -2826,7 +2852,10 @@ architecture STRUCTURE of mp0 is
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_v_axi4s_vid_out_0_fifo_read_level_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal NLW_v_axi4s_vid_out_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_v_tc_0_irq_UNCONNECTED : STD_LOGIC;
+  signal NLW_v_tc_0_fsync_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -2990,7 +3019,6 @@ axi_vdma_0: component mp0_axi_vdma_0_0
       m_axis_mm2s_tuser(0) => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
       m_axis_mm2s_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID,
       mm2s_frame_ptr_out(5 downto 0) => NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED(5 downto 0),
-      mm2s_fsync => fsync_out(0),
       mm2s_introut => NLW_axi_vdma_0_mm2s_introut_UNCONNECTED,
       s_axi_lite_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_lite_araddr(8 downto 0) => ps7_0_axi_periph_M03_AXI_ARADDR(8 downto 0),
@@ -3009,23 +3037,6 @@ axi_vdma_0: component mp0_axi_vdma_0_0
       s_axi_lite_wdata(31 downto 0) => ps7_0_axi_periph_M03_AXI_WDATA(31 downto 0),
       s_axi_lite_wready => ps7_0_axi_periph_M03_AXI_WREADY,
       s_axi_lite_wvalid => ps7_0_axi_periph_M03_AXI_WVALID
-    );
-axis_subset_converter_0: component mp0_axis_subset_converter_0_1
-     port map (
-      aclk => clk_wiz_0_clk_out1,
-      aresetn => xlconstant_0_dout(0),
-      m_axis_tdata(15 downto 0) => NLW_axis_subset_converter_0_m_axis_tdata_UNCONNECTED(15 downto 0),
-      m_axis_tkeep(1 downto 0) => NLW_axis_subset_converter_0_m_axis_tkeep_UNCONNECTED(1 downto 0),
-      m_axis_tlast => NLW_axis_subset_converter_0_m_axis_tlast_UNCONNECTED,
-      m_axis_tready => '1',
-      m_axis_tuser(0) => NLW_axis_subset_converter_0_m_axis_tuser_UNCONNECTED(0),
-      m_axis_tvalid => NLW_axis_subset_converter_0_m_axis_tvalid_UNCONNECTED,
-      s_axis_tdata(15 downto 0) => axi_vdma_0_M_AXIS_MM2S_TDATA(15 downto 0),
-      s_axis_tkeep(1 downto 0) => axi_vdma_0_M_AXIS_MM2S_TKEEP(1 downto 0),
-      s_axis_tlast => axi_vdma_0_M_AXIS_MM2S_TLAST,
-      s_axis_tready => axi_vdma_0_M_AXIS_MM2S_TREADY,
-      s_axis_tuser(0) => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
-      s_axis_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID
     );
 clk_wiz_0: component mp0_clk_wiz_0_1
      port map (
@@ -3340,33 +3351,76 @@ system_ila_0: component mp0_system_ila_0_0
       clk => processing_system7_0_FCLK_CLK0,
       resetn => rst_ps7_0_100M_peripheral_aresetn(0)
     );
-system_ila_1: component mp0_system_ila_1_0
+system_ila_1: component mp0_system_ila_1_1
      port map (
-      SLOT_0_AXIS_tdata(15 downto 0) => axi_vdma_0_M_AXIS_MM2S_TDATA(15 downto 0),
-      SLOT_0_AXIS_tkeep(1 downto 0) => axi_vdma_0_M_AXIS_MM2S_TKEEP(1 downto 0),
-      SLOT_0_AXIS_tlast => axi_vdma_0_M_AXIS_MM2S_TLAST,
-      SLOT_0_AXIS_tready => axi_vdma_0_M_AXIS_MM2S_TREADY,
-      SLOT_0_AXIS_tuser(0) => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
-      SLOT_0_AXIS_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID,
+      SLOT_0_VIDEO_TIMING_active_video => v_tc_0_vtiming_out_ACTIVE_VIDEO,
+      SLOT_0_VIDEO_TIMING_hblank => v_tc_0_vtiming_out_HBLANK,
+      SLOT_0_VIDEO_TIMING_hsync => v_tc_0_vtiming_out_HSYNC,
+      SLOT_0_VIDEO_TIMING_vblank => v_tc_0_vtiming_out_VBLANK,
+      SLOT_0_VIDEO_TIMING_vsync => v_tc_0_vtiming_out_VSYNC,
+      SLOT_1_AXIS_tdata(15 downto 0) => axi_vdma_0_M_AXIS_MM2S_TDATA(15 downto 0),
+      SLOT_1_AXIS_tkeep(1 downto 0) => axi_vdma_0_M_AXIS_MM2S_TKEEP(1 downto 0),
+      SLOT_1_AXIS_tlast => axi_vdma_0_M_AXIS_MM2S_TLAST,
+      SLOT_1_AXIS_tready => axi_vdma_0_M_AXIS_MM2S_TREADY,
+      SLOT_1_AXIS_tuser(0) => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
+      SLOT_1_AXIS_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID,
       clk => clk_wiz_0_clk_out1,
-      probe0(0) => active_video_out,
-      probe1(0) => hblank_out,
-      probe2(0) => hsync_out,
-      probe3(0) => vblank_out,
-      probe4(0) => vsync_out,
-      probe5(0) => fsync_out(0),
+      probe0(0) => v_axi4s_vid_out_0_vid_active_video,
+      probe1(35 downto 0) => v_axi4s_vid_out_0_vid_data(35 downto 0),
+      probe10(0) => v_axi4s_vid_out_0_underflow,
+      probe2(0) => v_axi4s_vid_out_0_vid_field_id,
+      probe3(0) => v_axi4s_vid_out_0_vid_hblank,
+      probe4(0) => v_axi4s_vid_out_0_vid_hsync,
+      probe5(0) => v_axi4s_vid_out_0_vid_vblank,
+      probe6(0) => v_axi4s_vid_out_0_vid_vsync,
+      probe7(0) => v_axi4s_vid_out_0_vtg_ce,
+      probe8(0) => v_axi4s_vid_out_0_locked,
+      probe9(0) => v_axi4s_vid_out_0_overflow,
       resetn => rst_mp0_25M_peripheral_aresetn(0)
+    );
+v_axi4s_vid_out_0: component mp0_v_axi4s_vid_out_0_0
+     port map (
+      aclk => clk_wiz_0_clk_out1,
+      aclken => xlconstant_1_dout(0),
+      aresetn => rst_mp0_25M_peripheral_aresetn(0),
+      fid => '0',
+      fifo_read_level(10 downto 0) => NLW_v_axi4s_vid_out_0_fifo_read_level_UNCONNECTED(10 downto 0),
+      locked => v_axi4s_vid_out_0_locked,
+      overflow => v_axi4s_vid_out_0_overflow,
+      s_axis_video_tdata(39 downto 16) => B"000000000000000000000000",
+      s_axis_video_tdata(15 downto 0) => axi_vdma_0_M_AXIS_MM2S_TDATA(15 downto 0),
+      s_axis_video_tlast => axi_vdma_0_M_AXIS_MM2S_TLAST,
+      s_axis_video_tready => axi_vdma_0_M_AXIS_MM2S_TREADY,
+      s_axis_video_tuser => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
+      s_axis_video_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID,
+      status(31 downto 0) => NLW_v_axi4s_vid_out_0_status_UNCONNECTED(31 downto 0),
+      underflow => v_axi4s_vid_out_0_underflow,
+      vid_active_video => v_axi4s_vid_out_0_vid_active_video,
+      vid_data(35 downto 0) => v_axi4s_vid_out_0_vid_data(35 downto 0),
+      vid_field_id => v_axi4s_vid_out_0_vid_field_id,
+      vid_hblank => v_axi4s_vid_out_0_vid_hblank,
+      vid_hsync => v_axi4s_vid_out_0_vid_hsync,
+      vid_io_out_ce => '1',
+      vid_vblank => v_axi4s_vid_out_0_vid_vblank,
+      vid_vsync => v_axi4s_vid_out_0_vid_vsync,
+      vtg_active_video => v_tc_0_vtiming_out_ACTIVE_VIDEO,
+      vtg_ce => v_axi4s_vid_out_0_vtg_ce,
+      vtg_field_id => '0',
+      vtg_hblank => v_tc_0_vtiming_out_HBLANK,
+      vtg_hsync => v_tc_0_vtiming_out_HSYNC,
+      vtg_vblank => v_tc_0_vtiming_out_VBLANK,
+      vtg_vsync => v_tc_0_vtiming_out_VSYNC
     );
 v_tc_0: component mp0_v_tc_0_0
      port map (
-      active_video_out => active_video_out,
+      active_video_out => v_tc_0_vtiming_out_ACTIVE_VIDEO,
       clk => clk_wiz_0_clk_out1,
       clken => xlconstant_1_dout(0),
       fsync_in => '0',
-      fsync_out(0) => fsync_out(0),
+      fsync_out(0) => NLW_v_tc_0_fsync_out_UNCONNECTED(0),
       gen_clken => xlconstant_1_dout(0),
-      hblank_out => hblank_out,
-      hsync_out => hsync_out,
+      hblank_out => v_tc_0_vtiming_out_HBLANK,
+      hsync_out => v_tc_0_vtiming_out_HSYNC,
       irq => NLW_v_tc_0_irq_UNCONNECTED,
       resetn => xlconstant_1_dout(0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
@@ -3389,12 +3443,8 @@ v_tc_0: component mp0_v_tc_0_0
       s_axi_wready => ps7_0_axi_periph_M04_AXI_WREADY,
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M04_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M04_AXI_WVALID,
-      vblank_out => vblank_out,
-      vsync_out => vsync_out
-    );
-xlconstant_0: component mp0_xlconstant_0_0
-     port map (
-      dout(0) => xlconstant_0_dout(0)
+      vblank_out => v_tc_0_vtiming_out_VBLANK,
+      vsync_out => v_tc_0_vtiming_out_VSYNC
     );
 xlconstant_1: component mp0_xlconstant_0_1
      port map (
