@@ -23,8 +23,9 @@ entity bd_9bd8_wrapper is
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 35 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     probe10 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -42,7 +43,7 @@ architecture STRUCTURE of bd_9bd8_wrapper is
   port (
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 35 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -52,6 +53,7 @@ architecture STRUCTURE of bd_9bd8_wrapper is
     probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe10 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     resetn : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_active_video : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_hblank : in STD_LOGIC;
@@ -82,8 +84,9 @@ bd_9bd8_i: component bd_9bd8
       SLOT_1_AXIS_tvalid => SLOT_1_AXIS_tvalid,
       clk => clk,
       probe0(0) => probe0(0),
-      probe1(35 downto 0) => probe1(35 downto 0),
+      probe1(11 downto 0) => probe1(11 downto 0),
       probe10(0) => probe10(0),
+      probe11(31 downto 0) => probe11(31 downto 0),
       probe2(0) => probe2(0),
       probe3(0) => probe3(0),
       probe4(0) => probe4(0),

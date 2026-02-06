@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Feb  5 15:04:59 2026
-// Host        : CO2041-06 running 64-bit major release  (build 9200)
+// Date        : Fri Feb  6 09:24:47 2026
+// Host        : CO2041-03 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_v_axi4s_vid_out_0_0/mp0_v_axi4s_vid_out_0_0_stub.v
 // Design      : mp0_v_axi4s_vid_out_0_0
@@ -19,11 +19,11 @@ module mp0_v_axi4s_vid_out_0_0(aclk, aclken, aresetn, s_axis_video_tdata,
   vid_io_out_ce, vid_active_video, vid_vsync, vid_hsync, vid_vblank, vid_hblank, vid_field_id, 
   vid_data, vtg_vsync, vtg_hsync, vtg_vblank, vtg_hblank, vtg_active_video, vtg_field_id, vtg_ce, 
   locked, overflow, underflow, fifo_read_level, status)
-/* synthesis syn_black_box black_box_pad_pin="aclk,aclken,aresetn,s_axis_video_tdata[39:0],s_axis_video_tvalid,s_axis_video_tready,s_axis_video_tuser,s_axis_video_tlast,fid,vid_io_out_ce,vid_active_video,vid_vsync,vid_hsync,vid_vblank,vid_hblank,vid_field_id,vid_data[35:0],vtg_vsync,vtg_hsync,vtg_vblank,vtg_hblank,vtg_active_video,vtg_field_id,vtg_ce,locked,overflow,underflow,fifo_read_level[10:0],status[31:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="aclk,aclken,aresetn,s_axis_video_tdata[15:0],s_axis_video_tvalid,s_axis_video_tready,s_axis_video_tuser,s_axis_video_tlast,fid,vid_io_out_ce,vid_active_video,vid_vsync,vid_hsync,vid_vblank,vid_hblank,vid_field_id,vid_data[11:0],vtg_vsync,vtg_hsync,vtg_vblank,vtg_hblank,vtg_active_video,vtg_field_id,vtg_ce,locked,overflow,underflow,fifo_read_level[10:0],status[31:0]" */;
   input aclk;
   input aclken;
   input aresetn;
-  input [39:0]s_axis_video_tdata;
+  input [15:0]s_axis_video_tdata;
   input s_axis_video_tvalid;
   output s_axis_video_tready;
   input s_axis_video_tuser;
@@ -36,7 +36,7 @@ module mp0_v_axi4s_vid_out_0_0(aclk, aclken, aresetn, s_axis_video_tdata,
   output vid_vblank;
   output vid_hblank;
   output vid_field_id;
-  output [35:0]vid_data;
+  output [11:0]vid_data;
   input vtg_vsync;
   input vtg_hsync;
   input vtg_vblank;

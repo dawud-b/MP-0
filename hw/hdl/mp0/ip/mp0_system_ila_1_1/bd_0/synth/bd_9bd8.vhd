@@ -23,8 +23,9 @@ entity bd_9bd8 is
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 35 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     probe10 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -36,7 +37,7 @@ entity bd_9bd8 is
     resetn : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of bd_9bd8 : entity is "bd_9bd8,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_9bd8,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of bd_9bd8 : entity is "bd_9bd8,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_9bd8,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of bd_9bd8 : entity is "mp0_system_ila_1_1.hwdef";
 end bd_9bd8;
@@ -46,7 +47,7 @@ architecture STRUCTURE of bd_9bd8 is
   port (
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 35 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -56,17 +57,18 @@ architecture STRUCTURE of bd_9bd8 is
     probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe10 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe12 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe13 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe14 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe15 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe16 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    probe17 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe18 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe16 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe17 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe18 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     probe19 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe20 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe21 : in STD_LOGIC_VECTOR ( 0 to 0 )
+    probe21 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe22 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component bd_9bd8_ila_lib_0;
   component bd_9bd8_g_inst_0 is
@@ -107,7 +109,8 @@ architecture STRUCTURE of bd_9bd8 is
   signal net_slot_1_axis_tvalid : STD_LOGIC;
   signal probe0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal probe10_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal probe1_1 : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal probe11_1 : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal probe1_1 : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal probe2_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal probe3_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal probe4_1 : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -150,7 +153,8 @@ begin
   clk_1 <= clk;
   probe0_1(0) <= probe0(0);
   probe10_1(0) <= probe10(0);
-  probe1_1(35 downto 0) <= probe1(35 downto 0);
+  probe11_1(31 downto 0) <= probe11(31 downto 0);
+  probe1_1(11 downto 0) <= probe1(11 downto 0);
   probe2_1(0) <= probe2(0);
   probe3_1(0) <= probe3(0);
   probe4_1(0) <= probe4(0);
@@ -181,20 +185,21 @@ ila_lib: component bd_9bd8_ila_lib_0
      port map (
       clk => clk_1,
       probe0(0) => probe0_1(0),
-      probe1(35 downto 0) => probe1_1(35 downto 0),
+      probe1(0) => probe1_1(0),
       probe10(0) => probe10_1(0),
-      probe11(0) => SLOT_0_VIDEO_TIMING_active_video_1,
-      probe12(0) => SLOT_0_VIDEO_TIMING_hblank_1,
-      probe13(0) => SLOT_0_VIDEO_TIMING_hsync_1,
-      probe14(0) => SLOT_0_VIDEO_TIMING_vblank_1,
-      probe15(0) => SLOT_0_VIDEO_TIMING_vsync_1,
-      probe16(15 downto 0) => net_slot_1_axis_tdata(15 downto 0),
-      probe17(1 downto 0) => net_slot_1_axis_tkeep(1 downto 0),
-      probe18(0) => net_slot_1_axis_tuser(0),
-      probe19(0) => net_slot_1_axis_tvalid,
+      probe11(31 downto 0) => probe11_1(31 downto 0),
+      probe12(0) => SLOT_0_VIDEO_TIMING_active_video_1,
+      probe13(0) => SLOT_0_VIDEO_TIMING_hblank_1,
+      probe14(0) => SLOT_0_VIDEO_TIMING_hsync_1,
+      probe15(0) => SLOT_0_VIDEO_TIMING_vblank_1,
+      probe16(0) => SLOT_0_VIDEO_TIMING_vsync_1,
+      probe17(15 downto 0) => net_slot_1_axis_tdata(15 downto 0),
+      probe18(1 downto 0) => net_slot_1_axis_tkeep(1 downto 0),
+      probe19(0) => net_slot_1_axis_tuser(0),
       probe2(0) => probe2_1(0),
-      probe20(0) => net_slot_1_axis_tready,
-      probe21(0) => net_slot_1_axis_tlast,
+      probe20(0) => net_slot_1_axis_tvalid,
+      probe21(0) => net_slot_1_axis_tready,
+      probe22(0) => net_slot_1_axis_tlast,
       probe3(0) => probe3_1(0),
       probe4(0) => probe4_1(0),
       probe5(0) => probe5_1(0),

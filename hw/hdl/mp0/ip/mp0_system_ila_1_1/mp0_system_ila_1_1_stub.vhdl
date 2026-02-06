@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Thu Feb  5 15:05:30 2026
--- Host        : CO2041-06 running 64-bit major release  (build 9200)
+-- Date        : Fri Feb  6 10:52:39 2026
+-- Host        : CO2041-03 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/mp0_system_ila_1_1_stub.vhdl
 -- Design      : mp0_system_ila_1_1
@@ -16,7 +16,7 @@ entity mp0_system_ila_1_1 is
   Port ( 
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 35 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -26,6 +26,7 @@ entity mp0_system_ila_1_1 is
     probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe10 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     SLOT_0_VIDEO_TIMING_active_video : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_hblank : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_vblank : in STD_LOGIC;
@@ -46,7 +47,7 @@ architecture stub of mp0_system_ila_1_1 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,probe0[0:0],probe1[35:0],probe2[0:0],probe3[0:0],probe4[0:0],probe5[0:0],probe6[0:0],probe7[0:0],probe8[0:0],probe9[0:0],probe10[0:0],SLOT_0_VIDEO_TIMING_active_video,SLOT_0_VIDEO_TIMING_hblank,SLOT_0_VIDEO_TIMING_vblank,SLOT_0_VIDEO_TIMING_hsync,SLOT_0_VIDEO_TIMING_vsync,SLOT_1_AXIS_tdata[15:0],SLOT_1_AXIS_tkeep[1:0],SLOT_1_AXIS_tlast,SLOT_1_AXIS_tuser[0:0],SLOT_1_AXIS_tvalid,SLOT_1_AXIS_tready,resetn";
+attribute black_box_pad_pin of stub : architecture is "clk,probe0[0:0],probe1[11:0],probe2[0:0],probe3[0:0],probe4[0:0],probe5[0:0],probe6[0:0],probe7[0:0],probe8[0:0],probe9[0:0],probe10[0:0],probe11[31:0],SLOT_0_VIDEO_TIMING_active_video,SLOT_0_VIDEO_TIMING_hblank,SLOT_0_VIDEO_TIMING_vblank,SLOT_0_VIDEO_TIMING_hsync,SLOT_0_VIDEO_TIMING_vsync,SLOT_1_AXIS_tdata[15:0],SLOT_1_AXIS_tkeep[1:0],SLOT_1_AXIS_tlast,SLOT_1_AXIS_tuser[0:0],SLOT_1_AXIS_tvalid,SLOT_1_AXIS_tready,resetn";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "bd_9bd8,Vivado 2020.1";
 begin

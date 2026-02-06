@@ -17,14 +17,14 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2024
+INFO: [Synth 8-7075] Helper process launched with PID 20576
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 994.559 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.434 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'mp0_system_ila_1_1' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/synth/mp0_system_ila_1_1.vhd:85]
-INFO: [Synth 8-3491] module 'bd_9bd8' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:11' bound to instance 'U0' of component 'bd_9bd8' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/synth/mp0_system_ila_1_1.vhd:300]
-INFO: [Synth 8-638] synthesizing module 'bd_9bd8' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:44]
-INFO: [Synth 8-3491] module 'bd_9bd8_g_inst_0' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_1/synth/bd_9bd8_g_inst_0.v:116' bound to instance 'g_inst' of component 'bd_9bd8_g_inst_0' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'mp0_system_ila_1_1' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/synth/mp0_system_ila_1_1.vhd:86]
+INFO: [Synth 8-3491] module 'bd_9bd8' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:11' bound to instance 'U0' of component 'bd_9bd8' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/synth/mp0_system_ila_1_1.vhd:302]
+INFO: [Synth 8-638] synthesizing module 'bd_9bd8' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:45]
+INFO: [Synth 8-3491] module 'bd_9bd8_g_inst_0' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_1/synth/bd_9bd8_g_inst_0.v:116' bound to instance 'g_inst' of component 'bd_9bd8_g_inst_0' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:167]
 INFO: [Synth 8-6157] synthesizing module 'bd_9bd8_g_inst_0' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_1/synth/bd_9bd8_g_inst_0.v:116]
 INFO: [Synth 8-6157] synthesizing module 'bd_9bd8_g_inst_0_gigantic_mux' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_1/bd_9bd8_g_inst_0_gigantic_mux.v:63]
 	Parameter C_NUM_MONITOR_SLOTS bound to: 1 - type: integer 
@@ -1371,8 +1371,8 @@ INFO: [Synth 8-6157] synthesizing module 'bd_9bd8_g_inst_0_gigantic_mux' [c:/Use
 	Parameter C_EN_GIGAMUX bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'bd_9bd8_g_inst_0_gigantic_mux' (2#1) [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_1/bd_9bd8_g_inst_0_gigantic_mux.v:63]
 INFO: [Synth 8-6155] done synthesizing module 'bd_9bd8_g_inst_0' (3#1) [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_1/synth/bd_9bd8_g_inst_0.v:116]
-INFO: [Synth 8-3491] module 'bd_9bd8_ila_lib_0' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_0/synth/bd_9bd8_ila_lib_0.vhd:53' bound to instance 'ila_lib' of component 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:180]
-INFO: [Synth 8-638] synthesizing module 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_0/synth/bd_9bd8_ila_lib_0.vhd:83]
+INFO: [Synth 8-3491] module 'bd_9bd8_ila_lib_0' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_0/synth/bd_9bd8_ila_lib_0.vhd:53' bound to instance 'ila_lib' of component 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:184]
+INFO: [Synth 8-638] synthesizing module 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_0/synth/bd_9bd8_ila_lib_0.vhd:84]
 	Parameter C_XLNX_HW_PROBE_INFO bound to: DEFAULT - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_CORE_TYPE bound to: 1 - type: integer 
@@ -1381,7 +1381,7 @@ INFO: [Synth 8-638] synthesizing module 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/48
 	Parameter C_CAPTURE_TYPE bound to: 0 - type: integer 
 	Parameter C_MU_TYPE bound to: 0 - type: integer 
 	Parameter C_TC_TYPE bound to: 0 - type: integer 
-	Parameter C_NUM_OF_PROBES bound to: 22 - type: integer 
+	Parameter C_NUM_OF_PROBES bound to: 23 - type: integer 
 	Parameter C_DATA_DEPTH bound to: 1024 - type: integer 
 	Parameter C_MAJOR_VERSION bound to: 2020 - type: integer 
 	Parameter C_MINOR_VERSION bound to: 1 - type: integer 
@@ -1404,7 +1404,7 @@ INFO: [Synth 8-638] synthesizing module 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/48
 	Parameter C_TIME_TAG_WIDTH bound to: 32 - type: integer 
 	Parameter C_ILA_CLK_FREQ bound to: 25000000 - type: integer 
 	Parameter C_PROBE0_WIDTH bound to: 1 - type: integer 
-	Parameter C_PROBE1_WIDTH bound to: 36 - type: integer 
+	Parameter C_PROBE1_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE2_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE3_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE4_WIDTH bound to: 1 - type: integer 
@@ -1414,14 +1414,14 @@ INFO: [Synth 8-638] synthesizing module 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/48
 	Parameter C_PROBE8_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE9_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE10_WIDTH bound to: 1 - type: integer 
-	Parameter C_PROBE11_WIDTH bound to: 1 - type: integer 
+	Parameter C_PROBE11_WIDTH bound to: 32 - type: integer 
 	Parameter C_PROBE12_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE13_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE14_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE15_WIDTH bound to: 1 - type: integer 
-	Parameter C_PROBE16_WIDTH bound to: 16 - type: integer 
-	Parameter C_PROBE17_WIDTH bound to: 2 - type: integer 
-	Parameter C_PROBE18_WIDTH bound to: 1 - type: integer 
+	Parameter C_PROBE16_WIDTH bound to: 1 - type: integer 
+	Parameter C_PROBE17_WIDTH bound to: 16 - type: integer 
+	Parameter C_PROBE18_WIDTH bound to: 2 - type: integer 
 	Parameter C_PROBE19_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE20_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE21_WIDTH bound to: 1 - type: integer 
@@ -2427,29 +2427,29 @@ INFO: [Synth 8-638] synthesizing module 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/48
 	Parameter C_PROBE1021_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE1022_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE1023_WIDTH bound to: 1 - type: integer 
-	Parameter C_PROBE0_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE1_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE2_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE3_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE4_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE5_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE6_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE7_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE8_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE9_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE10_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE11_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE12_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE13_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE14_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE15_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE16_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE17_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE18_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE19_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE20_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE21_MU_CNT bound to: 1 - type: integer 
-	Parameter C_PROBE22_MU_CNT bound to: 1 - type: integer 
+	Parameter C_PROBE0_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE1_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE2_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE3_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE4_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE5_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE6_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE7_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE8_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE9_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE10_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE11_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE12_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE13_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE14_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE15_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE16_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE17_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE18_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE19_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE20_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE21_MU_CNT bound to: 3 - type: integer 
+	Parameter C_PROBE22_MU_CNT bound to: 3 - type: integer 
 	Parameter C_PROBE23_MU_CNT bound to: 1 - type: integer 
 	Parameter C_PROBE24_MU_CNT bound to: 1 - type: integer 
 	Parameter C_PROBE25_MU_CNT bound to: 1 - type: integer 
@@ -3473,7 +3473,7 @@ INFO: [Synth 8-638] synthesizing module 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/48
 	Parameter C_PROBE19_TYPE bound to: 0 - type: integer 
 	Parameter C_PROBE20_TYPE bound to: 0 - type: integer 
 	Parameter C_PROBE21_TYPE bound to: 0 - type: integer 
-	Parameter C_PROBE22_TYPE bound to: 1 - type: integer 
+	Parameter C_PROBE22_TYPE bound to: 0 - type: integer 
 	Parameter C_PROBE23_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE24_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE25_TYPE bound to: 1 - type: integer 
@@ -4475,7 +4475,7 @@ INFO: [Synth 8-638] synthesizing module 'bd_9bd8_ila_lib_0' [c:/Users/zfsalti/48
 	Parameter C_PROBE1021_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE1022_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE1023_TYPE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'ila_v6_2_11_ila' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ipshared/c968/hdl/ila_v6_2_syn_rfs.v:5642' bound to instance 'U0' of component 'ila_v6_2_11_ila' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_0/synth/bd_9bd8_ila_lib_0.vhd:4268]
+INFO: [Synth 8-3491] module 'ila_v6_2_11_ila' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ipshared/c968/hdl/ila_v6_2_syn_rfs.v:5642' bound to instance 'U0' of component 'ila_v6_2_11_ila' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_0/synth/bd_9bd8_ila_lib_0.vhd:4269]
 INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1524]
 INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (11#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1524]
 INFO: [Synth 8-6157] synthesizing module 'CARRY4' [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1487]
@@ -4488,25 +4488,25 @@ INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [C:/Xilinx/Vivado/2020.1/scri
 INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (26#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:78148]
 INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:13724]
 INFO: [Synth 8-6155] done synthesizing module 'FDRE' (31#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:13724]
-INFO: [Synth 8-256] done synthesizing module 'bd_9bd8_ila_lib_0' (49#1) [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_0/synth/bd_9bd8_ila_lib_0.vhd:83]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_lib'. This will prevent further optimization [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:180]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'g_inst'. This will prevent further optimization [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:163]
-INFO: [Synth 8-256] done synthesizing module 'bd_9bd8' (50#1) [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'mp0_system_ila_1_1' (51#1) [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/synth/mp0_system_ila_1_1.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'bd_9bd8_ila_lib_0' (49#1) [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/ip/ip_0/synth/bd_9bd8_ila_lib_0.vhd:84]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_lib'. This will prevent further optimization [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:184]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'g_inst'. This will prevent further optimization [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'bd_9bd8' (50#1) [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/bd_0/synth/bd_9bd8.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'mp0_system_ila_1_1' (51#1) [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/synth/mp0_system_ila_1_1.vhd:86]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1320.426 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 235 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1353.500 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 628 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -4522,22 +4522,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/mp0_system_ila_1_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1320.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1353.500 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 170 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 144 instances
-  CFGLUT5 => SRLC32E: 26 instances
+  A total of 457 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 384 instances
+  CFGLUT5 => SRLC32E: 73 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1320.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1353.500 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -4547,9 +4547,9 @@ Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated 
 Applied set_property DONT_TOUCH = true for U0/ila_lib. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for U0/g_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized22'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized69'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized0'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized1'
@@ -4573,6 +4573,53 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized19'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized20'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized21'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized22'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized23'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized24'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized25'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized26'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized27'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized28'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized29'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized30'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized31'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized32'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized33'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized34'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized35'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized36'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized37'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized38'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized39'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized40'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized41'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized42'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized43'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized44'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized45'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized46'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized47'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized48'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized49'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized50'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized51'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized52'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized53'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized54'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized55'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized56'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized57'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized58'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized59'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized60'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized61'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized62'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized63'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized64'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized65'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized66'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized67'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized68'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -4582,7 +4629,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
                      P2S |                             0100 |                             0100
                      S2P |                             1000 |                             1000
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized22'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized69'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -4813,8 +4860,478 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
                      S2P |                             1000 |                             1000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized21'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized22'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized23'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized24'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized25'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized26'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized27'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized28'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized29'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized30'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized31'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized32'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized33'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized34'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized35'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized36'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized37'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized38'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized39'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized40'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized41'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized42'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized43'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized44'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized45'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized46'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized47'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized48'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized49'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized50'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized51'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized52'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized53'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized54'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized55'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized56'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized57'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized58'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized59'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized60'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized61'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized62'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized63'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized64'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized65'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized66'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized67'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized68'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -4835,25 +5352,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -4909,37 +5426,37 @@ INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[2] to constant 0
 INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[1] to constant 0
 INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -4955,50 +5472,51 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |    62|
-|2     |CFGLUT5  |   170|
-|3     |LUT1     |    49|
-|4     |LUT2     |    80|
-|5     |LUT3     |   140|
-|6     |LUT4     |   252|
-|7     |LUT5     |   127|
-|8     |LUT6     |   811|
-|9     |MUXF7    |    69|
-|10    |MUXF8    |    21|
-|11    |RAMB18E1 |     1|
-|12    |RAMB36E1 |     2|
-|13    |SRL16E   |    77|
-|14    |SRLC16E  |     2|
-|15    |SRLC32E  |    17|
-|16    |FDRE     |  2322|
-|17    |FDSE     |    10|
+|1     |CARRY4   |   169|
+|2     |CFGLUT5  |   457|
+|3     |LUT1     |    96|
+|4     |LUT2     |   141|
+|5     |LUT3     |   238|
+|6     |LUT4     |   613|
+|7     |LUT5     |   237|
+|8     |LUT6     |  1868|
+|9     |MUXF7    |   166|
+|10    |MUXF8    |    69|
+|11    |RAMB36E1 |     2|
+|12    |SRL16E   |    74|
+|13    |SRLC16E  |     2|
+|14    |SRLC32E  |    17|
+|15    |FDRE     |  4470|
+|16    |FDSE     |    15|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1353.500 ; gain = 340.066
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 1320.426 ; gain = 325.867
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1320.426 ; gain = 325.867
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 1353.500 ; gain = 340.066
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1353.500 ; gain = 340.066
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1320.426 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 325 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1353.500 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 863 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1320.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1353.500 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 170 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 144 instances
-  CFGLUT5 => SRLC32E: 26 instances
+  A total of 457 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 384 instances
+  CFGLUT5 => SRLC32E: 73 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-131 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+225 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1320.426 ; gain = 325.867
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1353.500 ; gain = 340.066
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/mp0_system_ila_1_1_synth_1/mp0_system_ila_1_1.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mp0_system_ila_1_1, cache-ID = 3553e10730eb5599
-INFO: [Coretcl 2-1174] Renamed 222 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mp0_system_ila_1_1, cache-ID = 16dd4e7374b1287c
+INFO: [Coretcl 2-1174] Renamed 468 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/mp0_system_ila_1_1_synth_1/mp0_system_ila_1_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mp0_system_ila_1_1_utilization_synth.rpt -pb mp0_system_ila_1_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Feb  5 15:05:31 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  6 10:52:40 2026...

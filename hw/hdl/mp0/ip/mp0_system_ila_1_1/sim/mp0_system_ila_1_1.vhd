@@ -57,7 +57,7 @@ ENTITY mp0_system_ila_1_1 IS
   PORT (
     clk : IN STD_LOGIC;
     probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    probe1 : IN STD_LOGIC_VECTOR(35 DOWNTO 0);
+    probe1 : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -67,6 +67,7 @@ ENTITY mp0_system_ila_1_1 IS
     probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe11 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     SLOT_0_VIDEO_TIMING_active_video : IN STD_LOGIC;
     SLOT_0_VIDEO_TIMING_hblank : IN STD_LOGIC;
     SLOT_0_VIDEO_TIMING_vblank : IN STD_LOGIC;
@@ -89,7 +90,7 @@ ARCHITECTURE mp0_system_ila_1_1_arch OF mp0_system_ila_1_1 IS
     PORT (
       clk : IN STD_LOGIC;
       probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      probe1 : IN STD_LOGIC_VECTOR(35 DOWNTO 0);
+      probe1 : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -99,6 +100,7 @@ ARCHITECTURE mp0_system_ila_1_1_arch OF mp0_system_ila_1_1 IS
       probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       probe9 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       probe10 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe11 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       SLOT_0_VIDEO_TIMING_active_video : IN STD_LOGIC;
       SLOT_0_VIDEO_TIMING_hblank : IN STD_LOGIC;
       SLOT_0_VIDEO_TIMING_vblank : IN STD_LOGIC;
@@ -146,6 +148,7 @@ BEGIN
       probe8 => probe8,
       probe9 => probe9,
       probe10 => probe10,
+      probe11 => probe11,
       SLOT_0_VIDEO_TIMING_active_video => SLOT_0_VIDEO_TIMING_active_video,
       SLOT_0_VIDEO_TIMING_hblank => SLOT_0_VIDEO_TIMING_hblank,
       SLOT_0_VIDEO_TIMING_vblank => SLOT_0_VIDEO_TIMING_vblank,

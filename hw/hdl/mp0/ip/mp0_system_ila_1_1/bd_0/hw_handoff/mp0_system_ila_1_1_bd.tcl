@@ -52,68 +52,70 @@ if { $list_projs eq "" } {
 variable design_name
 set design_name bd_9bd8
 
-# This script was generated for a remote BD. To create a non-remote design,
-# change the variable <run_remote_bd_flow> to <0>.
+# If you do not already have an existing IP Integrator design open,
+# you can create a design using the following command:
+#    create_bd_design $design_name
 
-set run_remote_bd_flow 1
-if { $run_remote_bd_flow == 1 } {
-  # Set the reference directory for source file relative paths (by default 
-  # the value is script directory path)
-  set origin_dir ./bd_0
+# Creating design if needed
+set errMsg ""
+set nRet 0
 
-  # Use origin directory path location variable, if specified in the tcl shell
-  if { [info exists ::origin_dir_loc] } {
-     set origin_dir $::origin_dir_loc
-  }
+set cur_design [current_bd_design -quiet]
+set list_cells [get_bd_cells -quiet]
 
-  set str_bd_folder [file normalize ${origin_dir}]
-  set str_bd_filepath ${str_bd_folder}/${design_name}/${design_name}.bd
+if { ${design_name} eq "" } {
+   # USE CASES:
+   #    1) Design_name not set
 
-  # Check if remote design exists on disk
-  if { [file exists $str_bd_filepath ] == 1 } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2030 -severity "ERROR" "The remote BD file path <$str_bd_filepath> already exists!"}
-     common::send_gid_msg -ssname BD::TCL -id 2031 -severity "INFO" "To create a non-remote BD, change the variable <run_remote_bd_flow> to <0>."
-     common::send_gid_msg -ssname BD::TCL -id 2032 -severity "INFO" "Also make sure there is no design <$design_name> existing in your current project."
+   set errMsg "Please set the variable <design_name> to a non-empty value."
+   set nRet 1
 
-     return 1
-  }
+} elseif { ${cur_design} ne "" && ${list_cells} eq "" } {
+   # USE CASES:
+   #    2): Current design opened AND is empty AND names same.
+   #    3): Current design opened AND is empty AND names diff; design_name NOT in project.
+   #    4): Current design opened AND is empty AND names diff; design_name exists in project.
 
-  # Check if design exists in memory
-  set list_existing_designs [get_bd_designs -quiet $design_name]
-  if { $list_existing_designs ne "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2033 -severity "ERROR" "The design <$design_name> already exists in this project! Will not create the remote BD <$design_name> at the folder <$str_bd_folder>."}
+   if { $cur_design ne $design_name } {
+      common::send_gid_msg -ssname BD::TCL -id 2001 -severity "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
+      set design_name [get_property NAME $cur_design]
+   }
+   common::send_gid_msg -ssname BD::TCL -id 2002 -severity "INFO" "Constructing design in IPI design <$cur_design>..."
 
-     common::send_gid_msg -ssname BD::TCL -id 2034 -severity "INFO" "To create a non-remote BD, change the variable <run_remote_bd_flow> to <0> or please set a different value to variable <design_name>."
+} elseif { ${cur_design} ne "" && $list_cells ne "" && $cur_design eq $design_name } {
+   # USE CASES:
+   #    5) Current design opened AND has components AND same names.
 
-     return 1
-  }
+   set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+   set nRet 1
+} elseif { [get_files -quiet ${design_name}.bd] ne "" } {
+   # USE CASES: 
+   #    6) Current opened design, has components, but diff names, design_name exists in project.
+   #    7) No opened design, design_name exists in project.
 
-  # Check if design exists on disk within project
-  set list_existing_designs [get_files -quiet */${design_name}.bd]
-  if { $list_existing_designs ne "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2035 -severity "ERROR" "The design <$design_name> already exists in this project at location:
-    $list_existing_designs"}
-     catch {common::send_gid_msg -ssname BD::TCL -id 2036 -severity "ERROR" "Will not create the remote BD <$design_name> at the folder <$str_bd_folder>."}
+   set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+   set nRet 2
 
-     common::send_gid_msg -ssname BD::TCL -id 2037 -severity "INFO" "To create a non-remote BD, change the variable <run_remote_bd_flow> to <0> or please set a different value to variable <design_name>."
-
-     return 1
-  }
-
-  # Now can create the remote BD
-  # NOTE - usage of <-dir> will create <$str_bd_folder/$design_name/$design_name.bd>
-  create_bd_design -dir -bdsource SBD $str_bd_folder $design_name
 } else {
+   # USE CASES:
+   #    8) No opened design, design_name not in project.
+   #    9) Current opened design, has components, but diff names, design_name not in project.
 
-  # Create regular design
-  if { [catch {create_bd_design -bdsource SBD $design_name} errmsg] } {
-     common::send_gid_msg -ssname BD::TCL -id 2038 -severity "INFO" "Please set a different value to variable <design_name>."
+   common::send_gid_msg -ssname BD::TCL -id 2003 -severity "INFO" "Currently there is no design <$design_name> in project, so creating one..."
 
-     return 1
-  }
+   create_bd_design -bdsource SBD $design_name
+
+   common::send_gid_msg -ssname BD::TCL -id 2004 -severity "INFO" "Making design <$design_name> as current_bd_design."
+   current_bd_design $design_name
+
 }
 
-current_bd_design $design_name
+common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
+
+if { $nRet != 0 } {
+   catch {common::send_gid_msg -ssname BD::TCL -id 2006 -severity "ERROR" $errMsg}
+   return $nRet
+}
 
 ##################################################################
 # DESIGN PROCs
@@ -166,7 +168,7 @@ proc create_root_design { parentCell } {
    CONFIG.ASSOCIATED_RESET {resetn} \
  ] $clk
   set probe0 [ create_bd_port -dir I -from 0 -to 0 probe0 ]
-  set probe1 [ create_bd_port -dir I -from 35 -to 0 probe1 ]
+  set probe1 [ create_bd_port -dir I -from 11 -to 0 probe1 ]
   set probe2 [ create_bd_port -dir I -from 0 -to 0 probe2 ]
   set probe3 [ create_bd_port -dir I -from 0 -to 0 probe3 ]
   set probe4 [ create_bd_port -dir I -from 0 -to 0 probe4 ]
@@ -176,6 +178,7 @@ proc create_root_design { parentCell } {
   set probe8 [ create_bd_port -dir I -from 0 -to 0 probe8 ]
   set probe9 [ create_bd_port -dir I -from 0 -to 0 probe9 ]
   set probe10 [ create_bd_port -dir I -from 0 -to 0 probe10 ]
+  set probe11 [ create_bd_port -dir I -from 31 -to 0 probe11 ]
   set resetn [ create_bd_port -dir I -type rst resetn ]
 
   # Create instance: g_inst, and set properties
@@ -199,7 +202,7 @@ proc create_root_design { parentCell } {
   set ila_lib [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_lib ]
   set_property -dict [ list \
    CONFIG.ALL_PROBE_SAME_MU {TRUE} \
-   CONFIG.ALL_PROBE_SAME_MU_CNT {1} \
+   CONFIG.ALL_PROBE_SAME_MU_CNT {3} \
    CONFIG.C_ADV_TRIGGER {FALSE} \
    CONFIG.C_DATA_DEPTH {1024} \
    CONFIG.C_EN_STRG_QUAL {0} \
@@ -207,15 +210,16 @@ proc create_root_design { parentCell } {
    CONFIG.C_ILA_CLK_FREQ {25000000} \
    CONFIG.C_INPUT_PIPE_STAGES {0} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {22} \
-   CONFIG.C_PROBE0_MU_CNT {1} \
+   CONFIG.C_NUM_OF_PROBES {23} \
+   CONFIG.C_PROBE0_MU_CNT {3} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE0_WIDTH {1} \
-   CONFIG.C_PROBE10_MU_CNT {1} \
+   CONFIG.C_PROBE10_MU_CNT {3} \
    CONFIG.C_PROBE10_TYPE {0} \
    CONFIG.C_PROBE10_WIDTH {1} \
+   CONFIG.C_PROBE11_MU_CNT {3} \
    CONFIG.C_PROBE11_TYPE {0} \
-   CONFIG.C_PROBE11_WIDTH {1} \
+   CONFIG.C_PROBE11_WIDTH {32} \
    CONFIG.C_PROBE12_TYPE {0} \
    CONFIG.C_PROBE12_WIDTH {1} \
    CONFIG.C_PROBE13_TYPE {0} \
@@ -225,42 +229,44 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE15_TYPE {0} \
    CONFIG.C_PROBE15_WIDTH {1} \
    CONFIG.C_PROBE16_TYPE {0} \
-   CONFIG.C_PROBE16_WIDTH {16} \
+   CONFIG.C_PROBE16_WIDTH {1} \
    CONFIG.C_PROBE17_TYPE {0} \
-   CONFIG.C_PROBE17_WIDTH {2} \
+   CONFIG.C_PROBE17_WIDTH {16} \
    CONFIG.C_PROBE18_TYPE {0} \
-   CONFIG.C_PROBE18_WIDTH {1} \
+   CONFIG.C_PROBE18_WIDTH {2} \
    CONFIG.C_PROBE19_TYPE {0} \
    CONFIG.C_PROBE19_WIDTH {1} \
-   CONFIG.C_PROBE1_MU_CNT {1} \
+   CONFIG.C_PROBE1_MU_CNT {3} \
    CONFIG.C_PROBE1_TYPE {0} \
-   CONFIG.C_PROBE1_WIDTH {36} \
+   CONFIG.C_PROBE1_WIDTH {1} \
    CONFIG.C_PROBE20_TYPE {0} \
    CONFIG.C_PROBE20_WIDTH {1} \
    CONFIG.C_PROBE21_TYPE {0} \
    CONFIG.C_PROBE21_WIDTH {1} \
-   CONFIG.C_PROBE2_MU_CNT {1} \
+   CONFIG.C_PROBE22_TYPE {0} \
+   CONFIG.C_PROBE22_WIDTH {1} \
+   CONFIG.C_PROBE2_MU_CNT {3} \
    CONFIG.C_PROBE2_TYPE {0} \
    CONFIG.C_PROBE2_WIDTH {1} \
-   CONFIG.C_PROBE3_MU_CNT {1} \
+   CONFIG.C_PROBE3_MU_CNT {3} \
    CONFIG.C_PROBE3_TYPE {0} \
    CONFIG.C_PROBE3_WIDTH {1} \
-   CONFIG.C_PROBE4_MU_CNT {1} \
+   CONFIG.C_PROBE4_MU_CNT {3} \
    CONFIG.C_PROBE4_TYPE {0} \
    CONFIG.C_PROBE4_WIDTH {1} \
-   CONFIG.C_PROBE5_MU_CNT {1} \
+   CONFIG.C_PROBE5_MU_CNT {3} \
    CONFIG.C_PROBE5_TYPE {0} \
    CONFIG.C_PROBE5_WIDTH {1} \
-   CONFIG.C_PROBE6_MU_CNT {1} \
+   CONFIG.C_PROBE6_MU_CNT {3} \
    CONFIG.C_PROBE6_TYPE {0} \
    CONFIG.C_PROBE6_WIDTH {1} \
-   CONFIG.C_PROBE7_MU_CNT {1} \
+   CONFIG.C_PROBE7_MU_CNT {3} \
    CONFIG.C_PROBE7_TYPE {0} \
    CONFIG.C_PROBE7_WIDTH {1} \
-   CONFIG.C_PROBE8_MU_CNT {1} \
+   CONFIG.C_PROBE8_MU_CNT {3} \
    CONFIG.C_PROBE8_TYPE {0} \
    CONFIG.C_PROBE8_WIDTH {1} \
-   CONFIG.C_PROBE9_MU_CNT {1} \
+   CONFIG.C_PROBE9_MU_CNT {3} \
    CONFIG.C_PROBE9_TYPE {0} \
    CONFIG.C_PROBE9_WIDTH {1} \
    CONFIG.C_TIME_TAG_WIDTH {32} \
@@ -273,20 +279,21 @@ proc create_root_design { parentCell } {
 connect_bd_intf_net -intf_net Conn [get_bd_intf_ports SLOT_1_AXIS] [get_bd_intf_pins g_inst/slot_0_axis]
 
   # Create port connections
-  connect_bd_net -net SLOT_0_VIDEO_TIMING_active_video_1 [get_bd_ports SLOT_0_VIDEO_TIMING_active_video] [get_bd_pins ila_lib/probe11]
-  connect_bd_net -net SLOT_0_VIDEO_TIMING_hblank_1 [get_bd_ports SLOT_0_VIDEO_TIMING_hblank] [get_bd_pins ila_lib/probe12]
-  connect_bd_net -net SLOT_0_VIDEO_TIMING_hsync_1 [get_bd_ports SLOT_0_VIDEO_TIMING_hsync] [get_bd_pins ila_lib/probe13]
-  connect_bd_net -net SLOT_0_VIDEO_TIMING_vblank_1 [get_bd_ports SLOT_0_VIDEO_TIMING_vblank] [get_bd_pins ila_lib/probe14]
-  connect_bd_net -net SLOT_0_VIDEO_TIMING_vsync_1 [get_bd_ports SLOT_0_VIDEO_TIMING_vsync] [get_bd_pins ila_lib/probe15]
+  connect_bd_net -net SLOT_0_VIDEO_TIMING_active_video_1 [get_bd_ports SLOT_0_VIDEO_TIMING_active_video] [get_bd_pins ila_lib/probe12]
+  connect_bd_net -net SLOT_0_VIDEO_TIMING_hblank_1 [get_bd_ports SLOT_0_VIDEO_TIMING_hblank] [get_bd_pins ila_lib/probe13]
+  connect_bd_net -net SLOT_0_VIDEO_TIMING_hsync_1 [get_bd_ports SLOT_0_VIDEO_TIMING_hsync] [get_bd_pins ila_lib/probe14]
+  connect_bd_net -net SLOT_0_VIDEO_TIMING_vblank_1 [get_bd_ports SLOT_0_VIDEO_TIMING_vblank] [get_bd_pins ila_lib/probe15]
+  connect_bd_net -net SLOT_0_VIDEO_TIMING_vsync_1 [get_bd_ports SLOT_0_VIDEO_TIMING_vsync] [get_bd_pins ila_lib/probe16]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins g_inst/aclk] [get_bd_pins ila_lib/clk]
-  connect_bd_net -net net_slot_1_axis_tdata [get_bd_pins g_inst/m_slot_0_axis_tdata] [get_bd_pins ila_lib/probe16]
-  connect_bd_net -net net_slot_1_axis_tkeep [get_bd_pins g_inst/m_slot_0_axis_tkeep] [get_bd_pins ila_lib/probe17]
-  connect_bd_net -net net_slot_1_axis_tlast [get_bd_pins g_inst/m_slot_0_axis_tlast] [get_bd_pins ila_lib/probe21]
-  connect_bd_net -net net_slot_1_axis_tready [get_bd_pins g_inst/m_slot_0_axis_tready] [get_bd_pins ila_lib/probe20]
-  connect_bd_net -net net_slot_1_axis_tuser [get_bd_pins g_inst/m_slot_0_axis_tuser] [get_bd_pins ila_lib/probe18]
-  connect_bd_net -net net_slot_1_axis_tvalid [get_bd_pins g_inst/m_slot_0_axis_tvalid] [get_bd_pins ila_lib/probe19]
+  connect_bd_net -net net_slot_1_axis_tdata [get_bd_pins g_inst/m_slot_0_axis_tdata] [get_bd_pins ila_lib/probe17]
+  connect_bd_net -net net_slot_1_axis_tkeep [get_bd_pins g_inst/m_slot_0_axis_tkeep] [get_bd_pins ila_lib/probe18]
+  connect_bd_net -net net_slot_1_axis_tlast [get_bd_pins g_inst/m_slot_0_axis_tlast] [get_bd_pins ila_lib/probe22]
+  connect_bd_net -net net_slot_1_axis_tready [get_bd_pins g_inst/m_slot_0_axis_tready] [get_bd_pins ila_lib/probe21]
+  connect_bd_net -net net_slot_1_axis_tuser [get_bd_pins g_inst/m_slot_0_axis_tuser] [get_bd_pins ila_lib/probe19]
+  connect_bd_net -net net_slot_1_axis_tvalid [get_bd_pins g_inst/m_slot_0_axis_tvalid] [get_bd_pins ila_lib/probe20]
   connect_bd_net -net probe0_1 [get_bd_ports probe0] [get_bd_pins ila_lib/probe0]
   connect_bd_net -net probe10_1 [get_bd_ports probe10] [get_bd_pins ila_lib/probe10]
+  connect_bd_net -net probe11_1 [get_bd_ports probe11] [get_bd_pins ila_lib/probe11]
   connect_bd_net -net probe1_1 [get_bd_ports probe1] [get_bd_pins ila_lib/probe1]
   connect_bd_net -net probe2_1 [get_bd_ports probe2] [get_bd_pins ila_lib/probe2]
   connect_bd_net -net probe3_1 [get_bd_ports probe3] [get_bd_pins ila_lib/probe3]

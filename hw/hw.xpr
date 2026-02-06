@@ -74,23 +74,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mp0.bd" FileRelPathName="ip/mp0_axi_vdma_0_0/mp0_axi_vdma_0_0.xci">
-          <Proxy FileSetName="mp0_axi_vdma_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mp0.bd" FileRelPathName="ip/mp0_axi_gpio_0_0/mp0_axi_gpio_0_0.xci">
           <Proxy FileSetName="mp0_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mp0.bd" FileRelPathName="ip/mp0_xbar_0/mp0_xbar_0.xci">
           <Proxy FileSetName="mp0_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mp0.bd" FileRelPathName="ip/mp0_v_tc_0_0/mp0_v_tc_0_0.xci">
-          <Proxy FileSetName="mp0_v_tc_0_0"/>
+        <CompFileExtendedInfo CompFileName="mp0.bd" FileRelPathName="ip/mp0_axi_vdma_0_0/mp0_axi_vdma_0_0.xci">
+          <Proxy FileSetName="mp0_axi_vdma_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mp0.bd" FileRelPathName="ip/mp0_v_axi4s_vid_out_0_0/mp0_v_axi4s_vid_out_0_0.xci">
           <Proxy FileSetName="mp0_v_axi4s_vid_out_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mp0.bd" FileRelPathName="ip/mp0_system_ila_1_1/mp0_system_ila_1_1.xci">
           <Proxy FileSetName="mp0_system_ila_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mp0.bd" FileRelPathName="ip/mp0_v_tc_0_0/mp0_v_tc_0_0.xci">
+          <Proxy FileSetName="mp0_v_tc_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/hdl/mp0/hdl/mp0_wrapper.vhd">
@@ -107,7 +107,14 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PPRDIR/zedboard_master.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PPRDIR/zedboard_master.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -232,9 +239,7 @@
     </Run>
     <Run Id="mp0_v_tc_0_0_synth_1" Type="Ft3:Synth" SrcSet="mp0_v_tc_0_0" Part="xc7z020clg484-1" ConstrsSet="mp0_v_tc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mp0_v_tc_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -244,9 +249,7 @@
     </Run>
     <Run Id="mp0_v_axi4s_vid_out_0_0_synth_1" Type="Ft3:Synth" SrcSet="mp0_v_axi4s_vid_out_0_0" Part="xc7z020clg484-1" ConstrsSet="mp0_v_axi4s_vid_out_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mp0_v_axi4s_vid_out_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -337,9 +340,7 @@
     </Run>
     <Run Id="mp0_v_tc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mp0_v_tc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mp0_v_tc_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -356,9 +357,7 @@
     </Run>
     <Run Id="mp0_v_axi4s_vid_out_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mp0_v_axi4s_vid_out_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mp0_v_axi4s_vid_out_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

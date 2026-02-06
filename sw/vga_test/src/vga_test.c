@@ -24,6 +24,9 @@
 #include "xaxivdma.h"
 #include <xil_io.h>
 
+#define CARDIN 0xc8103e
+#define GOLD 0xf1be48
+
 u16 test_image[480][640] __attribute__((aligned(64)));
 
 int main() {
@@ -48,12 +51,15 @@ int main() {
 
 
 
+
     // Initialize Test image for VDMA transfer to VGA monitor
-    for (i = 0; i < 480; i++) {
+    /*for (i = 0; i < 480; i++) {
       for (j = 0; j < 640; j++) {
-    	//if (j == 0)
-    		//test_image[i][j] = 0xBEEF;
-    	if (j < 213) {
+    	if (j == 0 && i == 0)
+    		test_image[i][j] = 0xAFE;
+    	else if (j == 0)
+    		test_image[i][j] = 0xBEEF;
+    	else if (j < 213) {
           test_image[i][j] = 0x000F; // red pixels
         }
         else if(j < 426 ) {
@@ -68,8 +74,49 @@ int main() {
         }
       }
 
+    }*/
 
+    for (i = 0; i < 480; i++) {
+      for (j = 0; j < 640; j++) {
+    	if (j == 639 || j == 0) // black 1 pixel border on left and right
+    		test_image[i][j] = 0;
+    	else if (j < 213) {
+          test_image[i][j] = 0xf00; // red pixels
+        }
+        else if(j < 426) {
+          test_image[i][j] = 0xf0; // green pixels
+        }
+        else {
+          test_image[i][j] = 0xf; // blue pixels
+        }
+      }
 
+    }
+
+   // checkboard
+   int offset = 80;
+   for (int i = 0; i < 480; i++) {
+    	for (int j = 0; j < 640; j++) {
+
+    		if (j < 80)
+    			test_image[i][j] = 0;
+    		else if (j >= 560) {
+    			test_image[i][j] = 0;
+    			continue;
+    		}
+
+    		if ( (i / 60) % 2 == 0) { // even rows
+    			if ((j / 60) % 2 == 0)
+    				test_image[i][j + offset] = ((CARDIN & 0xf00000) >> 12) | ((CARDIN & 0xf000) >> 8) | ((CARDIN & 0xf0) >> 4);
+    			else
+    				test_image[i][j + offset] = ((GOLD & 0xf00000) >> 12) | ((GOLD & 0xf000) >> 8) | ((GOLD & 0xf0) >> 4);
+    		} else { // odd rows
+    			if ((j / 60) % 2 == 0)
+    				test_image[i][j + offset] = ((GOLD & 0xf00000) >> 12) | ((GOLD & 0xf000) >> 8) | ((GOLD & 0xf0) >> 4);
+    			else
+    				test_image[i][j + offset] = ((CARDIN & 0xf00000) >> 12) | ((CARDIN & 0xf000) >> 8) | ((CARDIN & 0xf0) >> 4);
+    		}
+    	}
     }
 
 	// Make sure Display information gets flushed from cache to DDR Memory
