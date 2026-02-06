@@ -19,7 +19,7 @@
 #define _WAV_MISC_H_
 
 #include <stdint.h>
-#include "xilsd.h"
+#include "xilsd/xilsd.h"
 #include "xparameters.h"
 
 

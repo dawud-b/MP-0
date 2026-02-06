@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb  6 10:51:31 2026" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb  6 13:46:32 2026" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="bd_9bd8" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="25000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+    <PORT CLKFREQUENCY="25173010" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ila_lib" PORT="clk"/>
         <CONNECTION INSTANCE="g_inst" PORT="aclk"/>
@@ -151,7 +151,7 @@
       <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
       <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
       <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-      <PARAMETER NAME="FREQ_HZ" VALUE="25000000"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="25173010"/>
       <PARAMETER NAME="PHASE" VALUE="0.0"/>
       <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_0_clk_out1"/>
       <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -1518,7 +1518,7 @@
         <PARAMETER NAME="EDK_SPECIAL" VALUE="MONITOR"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="25000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="25173010" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
@@ -1599,7 +1599,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="25000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="25173010"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_0_clk_out1"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -1622,7 +1622,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="25000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="25173010"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_0_clk_out1"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -4778,7 +4778,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="25000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+        <PORT CLKFREQUENCY="25173010" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>

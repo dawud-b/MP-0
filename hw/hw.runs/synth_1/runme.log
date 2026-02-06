@@ -20,31 +20,31 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14548
+INFO: [Synth 8-7075] Helper process launched with PID 16960
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.301 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.531 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mp0_wrapper' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/hdl/mp0_wrapper.vhd:46]
 INFO: [Synth 8-3491] module 'mp0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2100' bound to instance 'mp0_i' of component 'mp0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/hdl/mp0_wrapper.vhd:79]
 INFO: [Synth 8-638] synthesizing module 'mp0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2136]
-INFO: [Synth 8-3491] module 'mp0_axi_gpio_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'mp0_axi_gpio_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2900]
-INFO: [Synth 8-638] synthesizing module 'mp0_axi_gpio_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_axi_gpio_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'mp0_axi_gpio_0_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_axi_gpio_0_1_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'mp0_axi_gpio_0_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2923]
-INFO: [Synth 8-638] synthesizing module 'mp0_axi_gpio_0_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_axi_gpio_0_1_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'mp0_axi_gpio_0_2' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_axi_gpio_0_2_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'mp0_axi_gpio_0_2' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2946]
-INFO: [Synth 8-638] synthesizing module 'mp0_axi_gpio_0_2' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_axi_gpio_0_2_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'mp0_axi_gpio_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'mp0_axi_gpio_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2900]
+INFO: [Synth 8-638] synthesizing module 'mp0_axi_gpio_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'mp0_axi_gpio_0_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_axi_gpio_0_1_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'mp0_axi_gpio_0_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2923]
+INFO: [Synth 8-638] synthesizing module 'mp0_axi_gpio_0_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_axi_gpio_0_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'mp0_axi_gpio_0_2' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_axi_gpio_0_2_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'mp0_axi_gpio_0_2' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2946]
+INFO: [Synth 8-638] synthesizing module 'mp0_axi_gpio_0_2' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_axi_gpio_0_2_stub.vhdl:31]
 INFO: [Synth 8-638] synthesizing module 'mp0_axi_mem_intercon_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:1056]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1UUXTBJ' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:877]
-INFO: [Synth 8-3491] module 'mp0_auto_pc_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'mp0_auto_pc_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:976]
-INFO: [Synth 8-638] synthesizing module 'mp0_auto_pc_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_auto_pc_1_stub.vhdl:44]
+INFO: [Synth 8-3491] module 'mp0_auto_pc_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'mp0_auto_pc_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:976]
+INFO: [Synth 8-638] synthesizing module 'mp0_auto_pc_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_auto_pc_1_stub.vhdl:44]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1UUXTBJ' (1#1) [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:877]
 INFO: [Synth 8-256] done synthesizing module 'mp0_axi_mem_intercon_0' (2#1) [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:1056]
-INFO: [Synth 8-3491] module 'mp0_axi_vdma_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'mp0_axi_vdma_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3006]
-INFO: [Synth 8-638] synthesizing module 'mp0_axi_vdma_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_axi_vdma_0_0_stub.vhdl:52]
-INFO: [Synth 8-3491] module 'mp0_clk_wiz_0_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_clk_wiz_0_1_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'mp0_clk_wiz_0_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3050]
-INFO: [Synth 8-638] synthesizing module 'mp0_clk_wiz_0_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_clk_wiz_0_1_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'mp0_processing_system7_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'mp0_processing_system7_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3055]
-INFO: [Synth 8-638] synthesizing module 'mp0_processing_system7_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_processing_system7_0_0_stub.vhdl:124]
+INFO: [Synth 8-3491] module 'mp0_axi_vdma_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'mp0_axi_vdma_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3006]
+INFO: [Synth 8-638] synthesizing module 'mp0_axi_vdma_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_axi_vdma_0_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'mp0_clk_wiz_0_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_clk_wiz_0_1_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'mp0_clk_wiz_0_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3050]
+INFO: [Synth 8-638] synthesizing module 'mp0_clk_wiz_0_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_clk_wiz_0_1_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'mp0_processing_system7_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'mp0_processing_system7_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3055]
+INFO: [Synth 8-638] synthesizing module 'mp0_processing_system7_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_processing_system7_0_0_stub.vhdl:124]
 INFO: [Synth 8-638] synthesizing module 'mp0_ps7_0_axi_periph_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:1305]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_LWWTKB' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_LWWTKB' (3#1) [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:61]
@@ -57,24 +57,24 @@ INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1VH5MCL' (6#1) [C
 INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_13H1B25' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:466]
 INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_13H1B25' (7#1) [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:466]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1SCKYA9' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:590]
-INFO: [Synth 8-3491] module 'mp0_auto_pc_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'mp0_auto_pc_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:773]
-INFO: [Synth 8-638] synthesizing module 'mp0_auto_pc_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'mp0_auto_pc_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'mp0_auto_pc_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:773]
+INFO: [Synth 8-638] synthesizing module 'mp0_auto_pc_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1SCKYA9' (8#1) [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:590]
-INFO: [Synth 8-3491] module 'mp0_xbar_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'mp0_xbar_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:1982]
-INFO: [Synth 8-638] synthesizing module 'mp0_xbar_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'mp0_xbar_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'mp0_xbar_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:1982]
+INFO: [Synth 8-638] synthesizing module 'mp0_xbar_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'mp0_ps7_0_axi_periph_1' (9#1) [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:1305]
-INFO: [Synth 8-3491] module 'mp0_rst_mp0_25M_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_rst_mp0_25M_0_stub.vhdl:5' bound to instance 'rst_mp0_25M' of component 'mp0_rst_mp0_25M_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3312]
-INFO: [Synth 8-638] synthesizing module 'mp0_rst_mp0_25M_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_rst_mp0_25M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'mp0_rst_ps7_0_100M_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_rst_ps7_0_100M_1_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'mp0_rst_ps7_0_100M_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3325]
-INFO: [Synth 8-638] synthesizing module 'mp0_rst_ps7_0_100M_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_rst_ps7_0_100M_1_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'mp0_system_ila_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_system_ila_0_0_stub.vhdl:5' bound to instance 'system_ila_0' of component 'mp0_system_ila_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3338]
-INFO: [Synth 8-638] synthesizing module 'mp0_system_ila_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_system_ila_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'mp0_system_ila_1_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_system_ila_1_1_stub.vhdl:5' bound to instance 'system_ila_1' of component 'mp0_system_ila_1_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3363]
-INFO: [Synth 8-638] synthesizing module 'mp0_system_ila_1_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_system_ila_1_1_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'mp0_v_axi4s_vid_out_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_v_axi4s_vid_out_0_0_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'mp0_v_axi4s_vid_out_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3391]
-INFO: [Synth 8-638] synthesizing module 'mp0_v_axi4s_vid_out_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_v_axi4s_vid_out_0_0_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'mp0_v_tc_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_v_tc_0_0_stub.vhdl:5' bound to instance 'v_tc_0' of component 'mp0_v_tc_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3423]
-INFO: [Synth 8-638] synthesizing module 'mp0_v_tc_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-21884-CO2041-03/realtime/mp0_v_tc_0_0_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'mp0_rst_mp0_25M_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_rst_mp0_25M_0_stub.vhdl:5' bound to instance 'rst_mp0_25M' of component 'mp0_rst_mp0_25M_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3312]
+INFO: [Synth 8-638] synthesizing module 'mp0_rst_mp0_25M_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_rst_mp0_25M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'mp0_rst_ps7_0_100M_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_rst_ps7_0_100M_1_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'mp0_rst_ps7_0_100M_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3325]
+INFO: [Synth 8-638] synthesizing module 'mp0_rst_ps7_0_100M_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_rst_ps7_0_100M_1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'mp0_system_ila_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_system_ila_0_0_stub.vhdl:5' bound to instance 'system_ila_0' of component 'mp0_system_ila_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3338]
+INFO: [Synth 8-638] synthesizing module 'mp0_system_ila_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_system_ila_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'mp0_system_ila_1_1' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_system_ila_1_1_stub.vhdl:5' bound to instance 'system_ila_1' of component 'mp0_system_ila_1_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3363]
+INFO: [Synth 8-638] synthesizing module 'mp0_system_ila_1_1' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_system_ila_1_1_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'mp0_v_axi4s_vid_out_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_v_axi4s_vid_out_0_0_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'mp0_v_axi4s_vid_out_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3391]
+INFO: [Synth 8-638] synthesizing module 'mp0_v_axi4s_vid_out_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_v_axi4s_vid_out_0_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'mp0_v_tc_0_0' declared at 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_v_tc_0_0_stub.vhdl:5' bound to instance 'v_tc_0' of component 'mp0_v_tc_0_0' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3423]
+INFO: [Synth 8-638] synthesizing module 'mp0_v_tc_0_0' [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/.Xil/Vivado-15864-CO2041-15/realtime/mp0_v_tc_0_0_stub.vhdl:43]
 INFO: [Synth 8-3491] module 'mp0_xlconstant_0_1' declared at 'c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xlconstant_0_1/synth/mp0_xlconstant_0_1.v:57' bound to instance 'xlconstant_1' of component 'mp0_xlconstant_0_1' [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:3458]
 INFO: [Synth 8-6157] synthesizing module 'mp0_xlconstant_0_1' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xlconstant_0_1/synth/mp0_xlconstant_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -86,18 +86,18 @@ INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance '
 INFO: [Synth 8-256] done synthesizing module 'mp0' (12#1) [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/synth/mp0.vhd:2136]
 INFO: [Synth 8-256] done synthesizing module 'mp0_wrapper' (13#1) [C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/hdl/mp0_wrapper.vhd:46]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.301 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.531 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.301 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.531 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.301 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.531 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1013.301 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1013.531 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -147,21 +147,21 @@ Parsing XDC File [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1056.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1054.859 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1056.238 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1054.859 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '50.000' specified during out-of-context synthesis of instance 'mp0_i/axi_vdma_0' at clock pin 's_axi_lite_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1056.250 ; gain = 42.949
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1055.109 ; gain = 41.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1056.250 ; gain = 42.949
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1055.109 ; gain = 41.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -446,10 +446,10 @@ Applied set_property DONT_TOUCH = true for mp0_i/system_ila_1. (constraint file 
 Applied set_property DONT_TOUCH = true for mp0_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mp0_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1056.250 ; gain = 42.949
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1055.109 ; gain = 41.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1056.250 ; gain = 42.949
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1055.109 ; gain = 41.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -471,25 +471,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1056.250 ; gain = 42.949
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1055.109 ; gain = 41.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1056.250 ; gain = 42.949
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1055.109 ; gain = 41.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1056.250 ; gain = 42.949
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1055.109 ; gain = 41.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1074.840 ; gain = 61.539
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1073.891 ; gain = 60.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -507,37 +507,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.574 ; gain = 68.273
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.629 ; gain = 67.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.574 ; gain = 68.273
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.629 ; gain = 67.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.574 ; gain = 68.273
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.629 ; gain = 67.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.574 ; gain = 68.273
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.629 ; gain = 67.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.574 ; gain = 68.273
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.629 ; gain = 67.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.574 ; gain = 68.273
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.629 ; gain = 67.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -587,25 +587,23 @@ Report Cell Usage:
 |17    |OBUF                            |    22|
 +------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.574 ; gain = 68.273
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.629 ; gain = 67.098
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.574 ; gain = 25.324
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.574 ; gain = 68.273
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1080.629 ; gain = 25.520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.629 ; gain = 67.098
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1093.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1092.695 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1096.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1095.996 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 75 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1096.609 ; gain = 83.309
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1095.996 ; gain = 82.465
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zfsalti/488/MP-0/hw/hw.runs/synth_1/mp0_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mp0_wrapper_utilization_synth.rpt -pb mp0_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Feb  6 11:09:45 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  6 13:48:13 2026...

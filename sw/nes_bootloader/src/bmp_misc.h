@@ -19,7 +19,7 @@
 #define _BMP_MISC_H
 
 #include <stdint.h>
-#include "xilsd.h"
+#include "xilsd/xilsd.h"
 #include "xparameters.h"
 
 

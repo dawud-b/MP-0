@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sun Feb  1 17:20:57 2026
--- Host        : CO2041-06 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top mp0_clk_wiz_0_1 -prefix
---               mp0_clk_wiz_0_1_ mp0_clk_wiz_0_1_sim_netlist.vhdl
+-- Date        : Fri Feb  6 13:47:01 2026
+-- Host        : CO2041-15 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_clk_wiz_0_1/mp0_clk_wiz_0_1_sim_netlist.vhdl
 -- Design      : mp0_clk_wiz_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,6 +19,8 @@ entity mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz is
     clk_out1 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz : entity is "mp0_clk_wiz_0_1_clk_wiz";
 end mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz;
 
 architecture STRUCTURE of mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz is
@@ -76,12 +78,12 @@ clkout1_buf: unisim.vcomponents.BUFG
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 9.125000,
+      CLKFBOUT_MULT_F => 36.375000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => false,
       CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 36.500000,
+      CLKOUT0_DIVIDE_F => 36.125000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,
@@ -111,7 +113,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => false,
       COMPENSATION => "ZHOLD",
-      DIVCLK_DIVIDE => 1,
+      DIVCLK_DIVIDE => 4,
       IS_CLKINSEL_INVERTED => '0',
       IS_PSEN_INVERTED => '0',
       IS_PSINCDEC_INVERTED => '0',

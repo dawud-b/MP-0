@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Feb  6 11:11:30 2026
-| Host         : CO2041-03 running 64-bit major release  (build 9200)
+| Date         : Fri Feb  6 13:49:59 2026
+| Host         : CO2041-15 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mp0_wrapper_methodology_drc_routed.rpt -pb mp0_wrapper_methodology_drc_routed.pb -rpx mp0_wrapper_methodology_drc_routed.rpx
 | Design       : mp0_wrapper
 | Device       : xc7z020clg484-1
@@ -102,57 +102,57 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X90Y111 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X87Y128 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X89Y111 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X88Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X87Y112 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X88Y128 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X85Y111 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X89Y128 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X88Y110 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X93Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X88Y112 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X92Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X86Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X91Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X86Y111 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X89Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X91Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X92Y128 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X93Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X86Y129 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X92Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X88Y130 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning

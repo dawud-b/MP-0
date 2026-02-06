@@ -17,8 +17,8 @@
  *****************************************************************************/
 
 #include "nes_bootloader.h"
-#include "NESCore_Callback.h"
-#include "NESCore.h"
+#include "NESCore/NESCore_Callback.h"
+#include "NESCore/NESCore.h"
 #include <stdlib.h>
 
 // The main output frame callback. Copy the results into the front-buffer.
@@ -31,13 +31,32 @@ void NESCore_Callback_OutputFrame(word *WorkFrame) {
 	uint16_t *ptr = (uint16_t *)FBUFFER_BASEADDR;
 	uint16_t tpixel;
 
+	// 64 pixel border on left and right
+	// 2x upscale: 256x240 -> 512x480
+	// don't reupdate border portion
 
-	for (i = 0 ; i < NES_DISP_HEIGHT; i++) {
+	uint16_t** fbuf = (uint16_t**) ptr; // cast so we can row column index it nicely
 
-		for (j = 0; j < NES_DISP_WIDTH; j++) {
+	for (i = 0 ; i < 480; i+=2) {
+
+		for (j = 64; j < 576; j+=2) {
+			// given pixel indexed *WorkFrame
+			// for every given pixel, its upscaled 2x2 piece is copied to framebuffer
+			// fb[i][j] = fb[i][j+1] = fb[i+1][j] = fb[i+1][j+1]
+
+			word result = *WorkFrame;
+			WorkFrame++;
+
+			tpixel = NesPalette3[result];
+
+			fbuf[i][j] = tpixel;
+			fbuf[i][j+1] = tpixel;
+			fbuf[i+1][j] = tpixel;
+			fbuf[i+1][j+1] = tpixel;
+
 
 			// Grab a temporary pixel using the color palette lookup table.
-			tpixel = NesPalette3[WorkFrame[NES_DISP_WIDTH*i+j]];
+			//tpixel = NesPalette3[WorkFrame[NES_DISP_WIDTH*i+j]];
 
 		}
 

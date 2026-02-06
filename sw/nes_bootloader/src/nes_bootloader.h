@@ -23,7 +23,7 @@
 #include <xil_exception.h>
 #include <xgpiops.h>
 #include <xgpio.h>
-#include "xilsd.h"
+#include "xilsd/xilsd.h"
 #include "bmp_misc.h"
 #include "wav_misc.h"
 #include "utils.h"

@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Fri Feb  6 10:51:28 2026
---Host        : CO2041-03 running 64-bit major release  (build 9200)
+--Date        : Fri Feb  6 13:46:17 2026
+--Host        : CO2041-15 running 64-bit major release  (build 9200)
 --Command     : generate_target mp0.bd
 --Design      : mp0
 --Purpose     : IP block netlist
@@ -2516,6 +2516,7 @@ architecture STRUCTURE of mp0 is
     probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe10 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     SLOT_0_VIDEO_TIMING_active_video : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_hblank : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_vblank : in STD_LOGIC;
@@ -2527,8 +2528,7 @@ architecture STRUCTURE of mp0 is
     SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
     SLOT_1_AXIS_tready : in STD_LOGIC;
-    resetn : in STD_LOGIC;
-    probe11 : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    resetn : in STD_LOGIC
   );
   end component mp0_system_ila_1_1;
   signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 7 downto 0 );

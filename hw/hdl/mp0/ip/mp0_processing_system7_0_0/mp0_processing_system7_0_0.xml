@@ -4076,7 +4076,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_GP0.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_GP0.FREQ_HZ">1e+08</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -7057,7 +7057,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_HP0.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_HP0.FREQ_HZ">1e+08</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -10932,7 +10932,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_GP0_ACLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI_GP0_ACLK.FREQ_HZ">1e+08</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -11347,7 +11347,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_HP0_ACLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_HP0_ACLK.FREQ_HZ">1e+08</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -15034,7 +15034,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 14:58:40 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -15053,11 +15053,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 14:58:33 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:25 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:dd79b525</spirit:value>
+            <spirit:value>9:cb1ea383</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -15068,7 +15068,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:dd79b525</spirit:value>
+            <spirit:value>9:cb1ea383</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -15084,11 +15084,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 14:58:33 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:25 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:dd79b525</spirit:value>
+            <spirit:value>9:cb1ea383</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -15109,7 +15109,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f504c8be</spirit:value>
+            <spirit:value>9:e54548b9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -15125,11 +15125,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 14:58:34 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:26 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0013557b</spirit:value>
+            <spirit:value>9:70fab38c</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -15148,11 +15148,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 14:58:34 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:26 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5828da27</spirit:value>
+            <spirit:value>9:eba279a1</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -15175,11 +15175,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 14:58:34 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:26 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f504c8be</spirit:value>
+            <spirit:value>9:e54548b9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -15195,11 +15195,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 14:58:34 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:26 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0013557b</spirit:value>
+            <spirit:value>9:70fab38c</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -15218,11 +15218,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 14:58:35 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:27 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5828da27</spirit:value>
+            <spirit:value>9:eba279a1</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -35326,7 +35326,7 @@
     <spirit:parameter>
       <spirit:name>PCW_M_AXI_GP0_FREQMHZ</spirit:name>
       <spirit:displayName>PCW M AXI GP0 FREQMHZ</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_M_AXI_GP0_FREQMHZ" spirit:order="45601">100</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_M_AXI_GP0_FREQMHZ" spirit:order="45601">100.0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -35386,7 +35386,7 @@
     <spirit:parameter>
       <spirit:name>PCW_S_AXI_HP0_FREQMHZ</spirit:name>
       <spirit:displayName>PCW S AXI HP0 FREQMHZ</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_S_AXI_HP0_FREQMHZ" spirit:order="46101">100</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_S_AXI_HP0_FREQMHZ" spirit:order="46101">100.0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

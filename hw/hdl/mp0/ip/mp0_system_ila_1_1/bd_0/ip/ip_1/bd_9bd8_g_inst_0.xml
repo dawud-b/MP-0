@@ -34,7 +34,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>aclk frequency</spirit:displayName>
           <spirit:description>aclk frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SIGNAL_CLOCK.FREQ_HZ">25000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SIGNAL_CLOCK.FREQ_HZ">25173010</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
@@ -915,7 +915,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_0_AXIS.FREQ_HZ">25000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_0_AXIS.FREQ_HZ">25173010</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -18155,7 +18155,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.FREQ_HZ">25000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.FREQ_HZ">25173010</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -31152,11 +31152,11 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 16:51:31 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:31 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:461abcb3</spirit:value>
+            <spirit:value>9:5a73cb08</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31167,7 +31167,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:461abcb3</spirit:value>
+            <spirit:value>9:5a73cb08</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31183,11 +31183,11 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 16:51:31 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:31 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:461abcb3</spirit:value>
+            <spirit:value>9:5a73cb08</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31203,11 +31203,11 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 16:51:31 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:31 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:91a090ae</spirit:value>
+            <spirit:value>9:80800caa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31223,11 +31223,11 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 06 16:51:31 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 19:46:31 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:91a090ae</spirit:value>
+            <spirit:value>9:80800caa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

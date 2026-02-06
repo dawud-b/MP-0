@@ -9,7 +9,7 @@ current_instance mp0_i/clk_wiz_0
 set_property src_info {type:SCOPED_XDC file:2 line:1 export:INPUT save:INPUT read:READ} [current_design]
 create_clock -period 10.000 [get_ports -no_traverse {}]
 set_property src_info {type:SCOPED_XDC file:2 line:4 export:INPUT save:INPUT read:READ} [current_design]
-create_generated_clock -source [get_ports clk_in1] -edges {1 2 3} -edge_shift {0.000 15.000 30.000} [get_ports {}]
+create_generated_clock -source [get_ports clk_in1] -edges {1 2 3} -edge_shift {0.000 14.863 29.725} [get_ports {}]
 current_instance
 set_property src_info {type:XDC file:3 line:187 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y21  [get_ports {VGA_RGB[0]}];  # "VGA-B1"

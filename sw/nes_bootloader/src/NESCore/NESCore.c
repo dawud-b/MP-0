@@ -28,7 +28,7 @@
 #include "NESCore_Mapper.h"
 #include "NESCore_pAPU.h"
 #include "M6502.h"
-#include "nes_bootloader.h"
+#include "../nes_bootloader.h"
 
 struct NES_State S;
 struct NES_Wiring W;

@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sun Feb  1 17:20:57 2026
-// Host        : CO2041-06 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top mp0_clk_wiz_0_1 -prefix
-//               mp0_clk_wiz_0_1_ mp0_clk_wiz_0_1_sim_netlist.v
+// Date        : Fri Feb  6 13:47:01 2026
+// Host        : CO2041-15 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_clk_wiz_0_1/mp0_clk_wiz_0_1_sim_netlist.v
 // Design      : mp0_clk_wiz_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,6 +27,7 @@ module mp0_clk_wiz_0_1
         .clk_out1(clk_out1));
 endmodule
 
+(* ORIG_REF_NAME = "mp0_clk_wiz_0_1_clk_wiz" *) 
 module mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz
    (clk_out1,
     clk_in1);
@@ -77,12 +78,12 @@ module mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(9.125000),
+    .CLKFBOUT_MULT_F(36.375000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(36.500000),
+    .CLKOUT0_DIVIDE_F(36.125000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
@@ -112,7 +113,7 @@ module mp0_clk_wiz_0_1_mp0_clk_wiz_0_1_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(4),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
     .IS_PSINCDEC_INVERTED(1'b0),
