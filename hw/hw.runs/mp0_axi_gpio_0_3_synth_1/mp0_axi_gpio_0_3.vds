@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Feb  7 12:29:06 2026
+# Process ID: 19876
+# Current directory: C:/Users/zfsalti/488/MP-0/hw/hw.runs/mp0_axi_gpio_0_3_synth_1
+# Command line: vivado.exe -log mp0_axi_gpio_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mp0_axi_gpio_0_3.tcl
+# Log file: C:/Users/zfsalti/488/MP-0/hw/hw.runs/mp0_axi_gpio_0_3_synth_1/mp0_axi_gpio_0_3.vds
+# Journal file: C:/Users/zfsalti/488/MP-0/hw/hw.runs/mp0_axi_gpio_0_3_synth_1\vivado.jou
+#-----------------------------------------------------------
+source mp0_axi_gpio_0_3.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP mp0_axi_gpio_0_3, cache-ID = 0367376c1961f4c1.
+INFO: [Common 17-206] Exiting Vivado at Sat Feb  7 12:29:09 2026...

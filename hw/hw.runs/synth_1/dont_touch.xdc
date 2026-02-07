@@ -9,15 +9,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0 || ORIG_REF
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_processing_system7_0_0/mp0_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_processing_system7_0_0 || ORIG_REF_NAME==mp0_processing_system7_0_0} -quiet] -quiet
 
-# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_gpio_0_0/mp0_axi_gpio_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_gpio_0_0 || ORIG_REF_NAME==mp0_axi_gpio_0_0} -quiet] -quiet
-
-# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_gpio_0_1/mp0_axi_gpio_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_gpio_0_1 || ORIG_REF_NAME==mp0_axi_gpio_0_1} -quiet] -quiet
-
-# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_gpio_0_2/mp0_axi_gpio_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_gpio_0_2 || ORIG_REF_NAME==mp0_axi_gpio_0_2} -quiet] -quiet
-
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xbar_0/mp0_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_xbar_0 || ORIG_REF_NAME==mp0_xbar_0} -quiet] -quiet
 
@@ -26,12 +17,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_ps7_0_axi_p
 
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_rst_ps7_0_100M_1/mp0_rst_ps7_0_100M_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_rst_ps7_0_100M_1 || ORIG_REF_NAME==mp0_rst_ps7_0_100M_1} -quiet] -quiet
-
-# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_0_0/mp0_system_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_system_ila_0_0 || ORIG_REF_NAME==mp0_system_ila_0_0} -quiet] -quiet
-
-# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_vdma_0_0/mp0_axi_vdma_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_vdma_0_0 || ORIG_REF_NAME==mp0_axi_vdma_0_0} -quiet] -quiet
 
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_mem_intercon_0/mp0_axi_mem_intercon_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_mem_intercon_0 || ORIG_REF_NAME==mp0_axi_mem_intercon_0} -quiet] -quiet
@@ -42,17 +27,20 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_clk_wiz_0_1
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_rst_mp0_25M_0/mp0_rst_mp0_25M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_rst_mp0_25M_0 || ORIG_REF_NAME==mp0_rst_mp0_25M_0} -quiet] -quiet
 
-# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_v_tc_0_0/mp0_v_tc_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_v_tc_0_0 || ORIG_REF_NAME==mp0_v_tc_0_0} -quiet] -quiet
-
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xlconstant_0_1/mp0_xlconstant_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_xlconstant_0_1 || ORIG_REF_NAME==mp0_xlconstant_0_1} -quiet] -quiet
 
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_v_axi4s_vid_out_0_0/mp0_v_axi4s_vid_out_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_v_axi4s_vid_out_0_0 || ORIG_REF_NAME==mp0_v_axi4s_vid_out_0_0} -quiet] -quiet
 
-# IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_system_ila_1_1/mp0_system_ila_1_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_system_ila_1_1 || ORIG_REF_NAME==mp0_system_ila_1_1} -quiet] -quiet
+# IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_gpio_0_3/mp0_axi_gpio_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_gpio_0_3 || ORIG_REF_NAME==mp0_axi_gpio_0_3} -quiet] -quiet
+
+# IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_vdma_0_2/mp0_axi_vdma_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_vdma_0_2 || ORIG_REF_NAME==mp0_axi_vdma_0_2} -quiet] -quiet
+
+# IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_v_tc_0_1/mp0_v_tc_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_v_tc_0_1 || ORIG_REF_NAME==mp0_v_tc_0_1} -quiet] -quiet
 
 # IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_auto_pc_0/mp0_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_auto_pc_0 || ORIG_REF_NAME==mp0_auto_pc_0} -quiet] -quiet

@@ -33,7 +33,23 @@ int main() {
 	// Enable the cache
     Xil_DCacheEnable();
 
+    //while (1)
+    //xil_printf("GPIO: %d and %d\r\n", Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0), Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0x8));
 
+
+	/*xil_printf("HERE");
+    XGpioPs_Config *config;
+    XGpioPs button;
+    config = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+    XGpioPs_CfgInitialize(&button, config, config->BaseAddr);
+    XGpioPs_SetDirection(&button, 1, 0);
+
+    while (1) {
+    	xil_printf("Button stat: %d\r\n", XGpioPs_ReadPin(&button, 51));
+    	usleep(100000);
+    }
+
+    return;*/
     // Main polling loop. For now, you can hard-code the .nes ROM you would like to load.
     // Later, improve the code to have user-specified entry and exit options
 	while (1) {
@@ -57,6 +73,7 @@ void nes_load() {
 	if (bootstate.debug_level >= 1)
 		xil_printf("nes_load(): loading %s\r\n", nes_fname);
 
+	xil_printf("wav baseaddr: %p\r\n", WAV_BASEADDR);
 
 	// Disable the cache so it will play nice with xilsd (needed here)
 	Xil_DCacheDisable();
@@ -100,8 +117,6 @@ void nes_load() {
 
 
 
-
-
 // Initializes bootloader state, the Xilinx peripherals, and the front buffer
 void xil_init() {
 
@@ -115,6 +130,14 @@ void xil_init() {
 
 
 	bootstate.debug_level = 1;
+
+    XGpioPs_Config *config;
+    config = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+    XGpioPs_CfgInitialize(&PSgpio, config, config->BaseAddr);
+    XGpioPs_SetDirection(&PSgpio, 1, 0);
+
+    // PL GPIO has a default input state so no need to configure it to input here
+
 
 	// For now, we disable the DCache as it causes problems with xilsd and vdma
 	Xil_DCacheDisable();
@@ -139,6 +162,11 @@ void xil_init() {
 		ptr[i] = INIT_COLOR;
 		if (i % WIDTH == 0)
 			ptr[i] = 0;
+	}
+
+	// initialize everything as 0, including borders.
+	for (i = 0; i < 480*640; i++) {
+		ptr[i] = 0;
 	}
 
 	// Initialize the back buffer

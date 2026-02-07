@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Fri Feb  6 13:46:18 2026
+--Date        : Sat Feb  7 12:42:53 2026
 --Host        : CO2041-15 running 64-bit major release  (build 9200)
 --Command     : generate_target mp0_wrapper.bd
 --Design      : mp0_wrapper
@@ -37,25 +37,14 @@ entity mp0_wrapper is
     VGA_HS : out STD_LOGIC;
     VGA_RGB : out STD_LOGIC_VECTOR ( 11 downto 0 );
     VGA_VS : out STD_LOGIC;
-    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    btns_5bits_0_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    sws_8bits_0_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end mp0_wrapper;
 
 architecture STRUCTURE of mp0_wrapper is
   component mp0 is
   port (
-    VGA_VS : out STD_LOGIC;
-    VGA_HS : out STD_LOGIC;
-    VGA_RGB : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -71,8 +60,17 @@ architecture STRUCTURE of mp0_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    btns_5bits_0_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    sws_8bits_0_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    VGA_RGB : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    VGA_HS : out STD_LOGIC;
+    VGA_VS : out STD_LOGIC
   );
   end component mp0;
 begin
@@ -102,8 +100,7 @@ mp0_i: component mp0
       VGA_HS => VGA_HS,
       VGA_RGB(11 downto 0) => VGA_RGB(11 downto 0),
       VGA_VS => VGA_VS,
-      btns_5bits_tri_i(4 downto 0) => btns_5bits_tri_i(4 downto 0),
-      leds_8bits_tri_o(7 downto 0) => leds_8bits_tri_o(7 downto 0),
-      sws_8bits_tri_i(7 downto 0) => sws_8bits_tri_i(7 downto 0)
+      btns_5bits_0_tri_i(4 downto 0) => btns_5bits_0_tri_i(4 downto 0),
+      sws_8bits_0_tri_i(7 downto 0) => sws_8bits_0_tri_i(7 downto 0)
     );
 end STRUCTURE;

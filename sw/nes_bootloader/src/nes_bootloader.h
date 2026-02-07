@@ -101,6 +101,8 @@ XVtc Vtc;
 XVtc_Config *VtcCfgPtr;
 int32_t ptv;
 
+XGpioPs PSgpio;
+
 // Function definitions for nes_bootloader.c
 void xil_init();
 void nes_load();

@@ -26,7 +26,7 @@
 // Your challenge is to figure out how to map that to your 640x480 framebuffer.
 void NESCore_Callback_OutputFrame(word *WorkFrame) {
 
-	extern uint16_t NesPalette3[];
+	extern uint16_t NesPalette3_RGB[];
 	uint32_t i, j;
 	uint16_t *ptr = (uint16_t *)FBUFFER_BASEADDR;
 	uint16_t tpixel;
@@ -34,12 +34,14 @@ void NESCore_Callback_OutputFrame(word *WorkFrame) {
 	// 64 pixel border on left and right
 	// 2x upscale: 256x240 -> 512x480
 	// don't reupdate border portion
+	// borders should be handled and initialized earlier. Don't spend cycles on redoing the borders.
 
-	uint16_t** fbuf = (uint16_t**) ptr; // cast so we can row column index it nicely
+	uint16_t (*fbuf)[640] = (uint16_t (*)[640]) ptr; // cast so we can row column index it nicely
+
 
 	for (i = 0 ; i < 480; i+=2) {
 
-		for (j = 64; j < 576; j+=2) {
+		for (j = 64; j < 576; j+=2) { // leave borders
 			// given pixel indexed *WorkFrame
 			// for every given pixel, its upscaled 2x2 piece is copied to framebuffer
 			// fb[i][j] = fb[i][j+1] = fb[i+1][j] = fb[i+1][j+1]
@@ -47,35 +49,67 @@ void NESCore_Callback_OutputFrame(word *WorkFrame) {
 			word result = *WorkFrame;
 			WorkFrame++;
 
-			tpixel = NesPalette3[result];
+			tpixel = NesPalette3_RGB[result];
 
 			fbuf[i][j] = tpixel;
 			fbuf[i][j+1] = tpixel;
 			fbuf[i+1][j] = tpixel;
 			fbuf[i+1][j+1] = tpixel;
 
-
-			// Grab a temporary pixel using the color palette lookup table.
-			//tpixel = NesPalette3[WorkFrame[NES_DISP_WIDTH*i+j]];
-
 		}
 
 	}
-  
+
 	// Flush the cache since VDMA does not play nicely with the cache
     Xil_DCacheFlush();
 
 	return;
 }
 
+typedef enum {
+	BTNC_GPIO = 1 << 0,
+	BTND_GPIO = 1 << 1,
+	BTNL_GPIO = 1 << 2,
+	BTNR_GPIO = 1 << 3,
+	BTNU_GPIO = 1 << 4
+} BTN_GPIO;
+
+static uint32_t old_sel_and_start = 0;
 
 // Main input callback. Overwite the passed-by references pad1 and pad2 
 // values, presumably using the buttons and switches on your ZedBoard.
 void NESCore_Callback_InputPadState(dword *pdwPad1, dword *pdwPad2) {
 
 	// Currently hard-coded so that player 1 is pressing A and B, and player 2 is pressing nothing.
-	*pdwPad1 = NCTL_A | NCTL_B;
+	//*pdwPad1 = NCTL_A | NCTL_B;
 	*pdwPad2 = 0;
+
+
+	uint32_t dpad = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0);
+	uint32_t sel_and_start = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0x8);
+	uint32_t psgpiodata = XGpioPs_Read(&PSgpio, 1); // bank 1. MIO50 and MIO51
+
+	dword pdwad = 0;
+	if (dpad & BTNU_GPIO)
+		pdwad |= NCTL_UP;
+	if (dpad & BTND_GPIO)
+		pdwad |= NCTL_DOWN;
+	if (dpad & BTNR_GPIO)
+		pdwad |= NCTL_RIGHT;
+	if (dpad & BTNL_GPIO)
+		pdwad |= NCTL_LEFT;
+	if (psgpiodata & (1 << 18))
+		pdwad |= NCTL_A;
+	if (psgpiodata & (1 << 19))
+		pdwad |= NCTL_B;
+	if ((old_sel_and_start & (1 << 1)) ^ (sel_and_start & (1 << 1)))
+		pdwad |= NCTL_SELECT;
+	if ((old_sel_and_start & (1 << 0)) ^ (sel_and_start & (1 << 0)))
+		pdwad |= NCTL_START;
+
+	*pdwPad1 = pdwad;
+
+	old_sel_and_start = sel_and_start;
 
 	return;
 }
@@ -175,3 +209,21 @@ uint16_t NesPalette3[65] = {
 		0x0FFA, 0x0FEB, 0x0EAD, 0x0FAF, 0x0BAF,
 		0x0BDF, 0x0AEF, 0x09FF, 0x09ED, 0x0AEA,
 		0x0DFA, 0x0FF9, 0x0DDD, 0x0111, 0x0111};
+
+
+// RGB version of NesPalette3. Don't waste cycles flipping the BGR one at runtime.
+uint16_t NesPalette3_RGB[] = {
+		0x0, 0x888, 0x03A, 0x01B, 0x409,
+		0xA05, 0xC02, 0xB00, 0x810, 0x520,
+		0x140, 0x040, 0x042, 0x046, 0x0,
+		0x0, 0x0, 0xCCC, 0x07F, 0x25F,
+		0x83F, 0xE2B, 0xF25, 0xF20, 0xD30,
+		0xC60, 0x380, 0x080, 0x085, 0x09C,
+		0x222, 0x0, 0x0, 0xFFF, 0x0DF,
+		0x6AF, 0xD8F, 0xF4F, 0xF68, 0xF83,
+		0xF91, 0xFB2, 0x9E0, 0x2F3, 0x0FA,
+		0x0FF, 0x555, 0x0, 0x0, 0xFFF,
+		0xAFF, 0xBEF, 0xDAE, 0xFAF, 0xFAB,
+		0xFDB, 0xFEA, 0xFF9, 0xDE9, 0xAEA,
+		0xAFD, 0x9FF, 0xDDD, 0x111, 0x111
+};
