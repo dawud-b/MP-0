@@ -11,6 +11,12 @@ create_clock -period 10.000 [get_ports -no_traverse {}]
 set_property src_info {type:SCOPED_XDC file:2 line:4 export:INPUT save:INPUT read:READ} [current_design]
 create_generated_clock -source [get_ports clk_in1] -edges {1 2 3} -edge_shift {0.000 14.863 29.725} [get_ports {}]
 current_instance
+set_property src_info {type:XDC file:3 line:100 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W12 [get_ports {snes_gpio[0]}];  # "JB1"
+set_property src_info {type:XDC file:3 line:101 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W11 [get_ports {snes_gpio[1]}];  # "JB2"
+set_property src_info {type:XDC file:3 line:102 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V10 [get_ports {snes_gpio[2]}];  # "JB3"
 set_property src_info {type:XDC file:3 line:187 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y21  [get_ports {VGA_RGB[0]}];  # "VGA-B1"
 set_property src_info {type:XDC file:3 line:188 export:INPUT save:INPUT read:READ} [current_design]
