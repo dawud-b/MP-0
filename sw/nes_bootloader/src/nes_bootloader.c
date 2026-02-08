@@ -19,6 +19,7 @@
 #include "nes_bootloader.h"
 #include "NESCore/NESCore.h"
 #include <unistd.h>  // for usleep
+#include "screen_io.h"
 
 
 
@@ -215,6 +216,8 @@ void xil_init() {
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, 640*2);  // Read Channel: VDMA MM2S HSIZE
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, 480);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
 
+    screen_io_init();
+    while (1);
 
   	return;
 }
