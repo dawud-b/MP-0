@@ -123,7 +123,9 @@ void NESCore_Callback_InputPadState(dword *pdwPad1, dword *pdwPad2) {
 		dword pdwad = 0;
 		Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 0 << SNES_PIN_LATCH);
 
-		for (int i = 0; i <= 7; i++) {
+		int left_right = 0;
+
+		for (int i = 0; i <= 11; i++) {
 			uint32_t serial_bit = Xil_In32(XPAR_AXI_GPIO_1_BASEADDR) & 1;
 			if (!serial_bit) {
 				switch (i) {
@@ -150,6 +152,12 @@ void NESCore_Callback_InputPadState(dword *pdwPad1, dword *pdwPad2) {
 					break;
 				case 7:
 					pdwad |= NCTL_RIGHT;
+					break;
+				case 10: // left trigger
+					left_right++;
+					break;
+				case 11: // right trigger
+					left_right++;
 				default:
 					break;
 				}
@@ -160,6 +168,10 @@ void NESCore_Callback_InputPadState(dword *pdwPad1, dword *pdwPad2) {
 		}
 
 		*pdwPad1 = pdwad;
+
+		extern char exit_game;
+		if (left_right == 2)
+			exit_game = 1;
 
 #endif
 

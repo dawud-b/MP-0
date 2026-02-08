@@ -60,7 +60,7 @@ int main() {
 
 }
 
-
+char exit_game = 0;
 
 // Runs the main NES emulation
 void nes_load() {
@@ -109,10 +109,16 @@ void nes_load() {
 			NESCore_Cycle();
 		}
 
+		if (exit_game)
+			break;
+
 	} while (1);
 
 
 	bootstate.nes_playing = 0;
+
+	for (i = 0; i < WIDTH*HEIGHT; i++)
+		bootstate.activeBuffer[i] = 0;
 
 	return;
 
