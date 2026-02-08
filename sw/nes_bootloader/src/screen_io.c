@@ -26,20 +26,37 @@ void screen_io_init() {
 
 	xilsd_fclose(fp);
 
-	uint16_t* ptr = (uint16_t*) FBUFFER_BASEADDR;
+	//uint16_t* ptr = (uint16_t*) FBUFFER_BASEADDR;
 
-	for (int i = 0; i < 21; i++) {
+	/*for (int i = 0; i < 21; i++) {
 		for (int j = 0; j < 13; j++) {
 			ptr[i * 640 + j] = font_characters[43][i][j];
 		}
-	}
+	}*/
 
-	Xil_DCacheFlush();
+	//screen_io_print("Hey hello. New line char:\nOk. Now let's make sure it also wraps around correctly when at the end of the line (so a character isn't split)\n\n\nAnd now we are here.");
+	//screen_io_flush();
+	//screen_io_clear();
+	//screen_io_print("stuff");
+	//screen_io_print("Ok lets see multiple lines and whatnot in action ok more text more text more text and even more text lets keep going and see how it goes with more text. This is getting interesting lets keep going. Ok, now let's do this:\nYou saw that new line character?");
+	//*/
+	//screen_io_print(" Here's a few more\nYep.");
+	//screen_io_print("\n\n\nMore\n\n\n\n\nMore\n\n\n\n\n\nMore\nMore");
+
+	//Xil_DCacheFlush();
 
 
 }
 
 void screen_io_putc(char c) {
+
+	if (c == '\n') {
+		int current_line = ((int) (char_loc_ptr - (uint16_t*) FBUFFER_BASEADDR)) / 640;
+		char_loc_ptr = ((uint16_t*) FBUFFER_BASEADDR) + (current_line + 21) * 640;
+		if (current_line + 21 >= 480 - 21)
+			char_loc_ptr = FBUFFER_BASEADDR;
+		return;
+	}
 
 	int font_char_idx = c - ' '; // starts at <SPACE>
 
@@ -49,4 +66,30 @@ void screen_io_putc(char c) {
 		}
 	}
 
+	if ((int) (char_loc_ptr - (uint16_t*) FBUFFER_BASEADDR) % 640 >= 640 - 2*13) { // need to go to new line
+		int current_line = ((int) (char_loc_ptr - (uint16_t*) FBUFFER_BASEADDR)) / 640;
+		char_loc_ptr = &((uint16_t*) FBUFFER_BASEADDR)[(current_line + 21) * 640];
+		if (current_line + 21 >= 480 - 21)
+			char_loc_ptr = FBUFFER_BASEADDR;
+	} else
+		char_loc_ptr += 13;
+
+}
+
+void screen_io_print(char* str) {
+	while (*str) {
+		screen_io_putc(*str);
+		str++;
+	}
+}
+
+void screen_io_clear() {
+	for (int i = 0; i < 460*480; i++)
+		((uint16_t*) FBUFFER_BASEADDR)[i] = 0;
+
+	char_loc_ptr = FBUFFER_BASEADDR;
+}
+
+void screen_io_flush() {
+	Xil_DCacheFlush();
 }

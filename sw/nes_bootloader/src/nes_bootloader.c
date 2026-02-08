@@ -126,6 +126,7 @@ void nes_load() {
 }
 
 
+void menu();
 
 
 // Initializes bootloader state, the Xilinx peripherals, and the front buffer
@@ -216,10 +217,41 @@ void xil_init() {
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, 640*2);  // Read Channel: VDMA MM2S HSIZE
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, 480);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
 
-    screen_io_init();
-    while (1);
+    //screen_io_init();
+    //menu();
+    //while (1);
 
   	return;
 }
 
+void menu() {
+
+	FIL* dbfile;
+	xilsd_fopen(dbfile, "rominfo.db");
+	char game_entry[85];
+	xilsd_fread(game_entry, 1, 82, dbfile);
+
+	for (int i = 0; i < 84; i++) {
+		if (game_entry[i] == ';') {
+			game_entry[i] = '\0';
+		}
+	}
+	screen_io_putc('*');
+	screen_io_print(game_entry);
+
+	for (int i = 0; i < 120; i++) {
+		xilsd_fread(game_entry, 1, 82, dbfile);
+		for (int i = 0; i < 84; i++) {
+			if (game_entry[i] == ';') {
+				game_entry[i] = '\0';
+			}
+		}
+		screen_io_putc('_');
+		screen_io_print(game_entry);
+	}
+
+	xilsd_fclose(dbfile);
+	screen_io_flush();
+
+}
 
