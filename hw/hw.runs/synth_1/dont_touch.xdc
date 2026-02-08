@@ -45,6 +45,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_v_tc_0_1 ||
 # IP: C:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_gpio_1_1/mp0_axi_gpio_1_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_axi_gpio_1_1 || ORIG_REF_NAME==mp0_axi_gpio_1_1} -quiet] -quiet
 
+# IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_xlslice_0_0/mp0_xlslice_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_xlslice_0_0 || ORIG_REF_NAME==mp0_xlslice_0_0} -quiet] -quiet
+
 # IP: c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_auto_pc_0/mp0_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mp0_auto_pc_0 || ORIG_REF_NAME==mp0_auto_pc_0} -quiet] -quiet
 

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sat Feb  7 15:45:47 2026
+--Date        : Sat Feb  7 17:29:21 2026
 --Host        : CO2041-15 running 64-bit major release  (build 9200)
 --Command     : generate_target mp0.bd
 --Design      : mp0
@@ -1871,12 +1871,12 @@ entity mp0 is
     VGA_RGB : out STD_LOGIC_VECTOR ( 11 downto 0 );
     VGA_VS : out STD_LOGIC;
     btns_5bits_0_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    controller_input : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    snes_gpio : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    snes_gpio_in : in STD_LOGIC_VECTOR ( 0 to 0 );
+    snes_gpio_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     sws_8bits_0_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mp0 : entity is "mp0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mp0,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=12,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of mp0 : entity is "mp0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mp0,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=12,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of mp0 : entity is "mp0.hwdef";
 end mp0;
@@ -2203,9 +2203,15 @@ architecture STRUCTURE of mp0 is
     gpio_io_t : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component mp0_axi_gpio_1_1;
+  component mp0_xlslice_0_0 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component mp0_xlslice_0_0;
   signal axi_gpio_0_GPIO2_TRI_I : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_gpio_0_GPIO_TRI_I : STD_LOGIC_VECTOR ( 4 downto 0 );
-  signal axi_gpio_1_gpio_io_t : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal axi_gpio_1_gpio_io_o : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal axi_mem_intercon_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_mem_intercon_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_mem_intercon_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2240,6 +2246,7 @@ architecture STRUCTURE of mp0 is
   signal axi_vdma_0_M_AXI_MM2S_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_vdma_0_M_AXI_MM2S_RVALID : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
+  signal gpio_io_i_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -2380,7 +2387,8 @@ architecture STRUCTURE of mp0 is
   signal v_tc_0_vtiming_out_VBLANK : STD_LOGIC;
   signal v_tc_0_vtiming_out_VSYNC : STD_LOGIC;
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_axi_gpio_1_gpio_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_axi_gpio_1_gpio_io_t_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_axi_vdma_0_mm2s_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_vdma_0_m_axis_mm2s_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -2451,7 +2459,8 @@ begin
   VGA_VS <= v_axi4s_vid_out_0_vid_vsync;
   axi_gpio_0_GPIO2_TRI_I(7 downto 0) <= sws_8bits_0_tri_i(7 downto 0);
   axi_gpio_0_GPIO_TRI_I(4 downto 0) <= btns_5bits_0_tri_i(4 downto 0);
-  snes_gpio(2 downto 0) <= axi_gpio_1_gpio_io_t(2 downto 0);
+  gpio_io_i_0_1(0) <= snes_gpio_in(0);
+  snes_gpio_out(1 downto 0) <= xlslice_0_Dout(1 downto 0);
 axi_gpio_0: component mp0_axi_gpio_0_3
      port map (
       gpio2_io_i(7 downto 0) => axi_gpio_0_GPIO2_TRI_I(7 downto 0),
@@ -2478,9 +2487,10 @@ axi_gpio_0: component mp0_axi_gpio_0_3
     );
 axi_gpio_1: component mp0_axi_gpio_1_1
      port map (
-      gpio_io_i(2 downto 0) => B"000",
-      gpio_io_o(2 downto 0) => NLW_axi_gpio_1_gpio_io_o_UNCONNECTED(2 downto 0),
-      gpio_io_t(2 downto 0) => axi_gpio_1_gpio_io_t(2 downto 0),
+      gpio_io_i(2 downto 1) => B"00",
+      gpio_io_i(0) => gpio_io_i_0_1(0),
+      gpio_io_o(2 downto 0) => axi_gpio_1_gpio_io_o(2 downto 0),
+      gpio_io_t(2 downto 0) => NLW_axi_gpio_1_gpio_io_t_UNCONNECTED(2 downto 0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M03_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
@@ -2919,5 +2929,10 @@ v_tc_0: component mp0_v_tc_0_1
 xlconstant_1: component mp0_xlconstant_0_1
      port map (
       dout(0) => xlconstant_1_dout(0)
+    );
+xlslice_0: component mp0_xlslice_0_0
+     port map (
+      Din(2 downto 0) => axi_gpio_1_gpio_io_o(2 downto 0),
+      Dout(1 downto 0) => xlslice_0_Dout(1 downto 0)
     );
 end STRUCTURE;

@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sat Feb  7 15:36:43 2026
+// Date        : Sat Feb  7 17:13:56 2026
 // Host        : CO2041-15 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_gpio_1_1/mp0_axi_gpio_1_1_stub.v

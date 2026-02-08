@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sat Feb  7 15:36:43 2026
+-- Date        : Sat Feb  7 17:13:56 2026
 -- Host        : CO2041-15 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/zfsalti/488/MP-0/hw/hdl/mp0/ip/mp0_axi_gpio_1_1/mp0_axi_gpio_1_1_sim_netlist.vhdl
@@ -841,27 +841,27 @@ begin
       I5 => \^not_dual.gpio_oe_reg[2]_0\,
       O => \Not_Dual.gpio_OE[2]_i_1_n_0\
     );
-\Not_Dual.gpio_OE_reg[0]\: unisim.vcomponents.FDRE
+\Not_Dual.gpio_OE_reg[0]\: unisim.vcomponents.FDSE
     generic map(
-      INIT => '0'
+      INIT => '1'
     )
         port map (
       C => s_axi_aclk,
       CE => '1',
       D => \Not_Dual.gpio_OE[0]_i_1_n_0\,
       Q => \^not_dual.gpio_oe_reg[0]_0\,
-      R => bus2ip_reset
+      S => bus2ip_reset
     );
-\Not_Dual.gpio_OE_reg[1]\: unisim.vcomponents.FDRE
+\Not_Dual.gpio_OE_reg[1]\: unisim.vcomponents.FDSE
     generic map(
-      INIT => '0'
+      INIT => '1'
     )
         port map (
       C => s_axi_aclk,
       CE => '1',
       D => \Not_Dual.gpio_OE[1]_i_1_n_0\,
       Q => \^not_dual.gpio_oe_reg[1]_0\,
-      R => bus2ip_reset
+      S => bus2ip_reset
     );
 \Not_Dual.gpio_OE_reg[2]\: unisim.vcomponents.FDSE
     generic map(
@@ -1659,7 +1659,7 @@ entity mp0_axi_gpio_1_1_axi_gpio is
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of mp0_axi_gpio_1_1_axi_gpio : entity is 32;
   attribute C_TRI_DEFAULT : integer;
-  attribute C_TRI_DEFAULT of mp0_axi_gpio_1_1_axi_gpio : entity is -7;
+  attribute C_TRI_DEFAULT of mp0_axi_gpio_1_1_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of mp0_axi_gpio_1_1_axi_gpio : entity is -1;
   attribute ORIG_REF_NAME : string;
@@ -1994,7 +1994,7 @@ architecture STRUCTURE of mp0_axi_gpio_1_1 is
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of U0 : label is 32;
   attribute C_TRI_DEFAULT : integer;
-  attribute C_TRI_DEFAULT of U0 : label is -7;
+  attribute C_TRI_DEFAULT of U0 : label is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of U0 : label is -1;
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
@@ -2003,7 +2003,7 @@ architecture STRUCTURE of mp0_axi_gpio_1_1 is
   attribute x_interface_info : string;
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN mp0_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN mp0_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST";
   attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
@@ -2022,7 +2022,7 @@ architecture STRUCTURE of mp0_axi_gpio_1_1 is
   attribute x_interface_info of gpio_io_t : signal is "xilinx.com:interface:gpio:1.0 GPIO TRI_T";
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN mp0_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN mp0_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";

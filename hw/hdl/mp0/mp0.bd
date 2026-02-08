@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x76DA749E61D1BAB2",
+      "boundary_crc": "0xFF7C900138573BAD",
       "device": "xc7z020clg484-1",
       "name": "mp0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -34,7 +34,8 @@
       "axi_gpio_0": "",
       "axi_vdma_0": "",
       "v_tc_0": "",
-      "axi_gpio_1": ""
+      "axi_gpio_1": "",
+      "xlslice_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -122,14 +123,14 @@
       "VGA_VS": {
         "direction": "O"
       },
-      "controller_input": {
-        "direction": "I",
-        "left": "2",
+      "snes_gpio_out": {
+        "direction": "O",
+        "left": "1",
         "right": "0"
       },
-      "snes_gpio": {
-        "direction": "O",
-        "left": "2",
+      "snes_gpio_in": {
+        "direction": "I",
+        "left": "0",
         "right": "0"
       }
     },
@@ -1178,16 +1179,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1424,36 +1425,6 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
-          "m02_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
-            ]
-          },
-          "m03_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M03_AXI",
-              "m03_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m03_couplers": {
-            "interface_ports": [
-              "xbar/M03_AXI",
-              "m03_couplers/S_AXI"
-            ]
-          },
           "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
@@ -1472,16 +1443,46 @@
               "m00_couplers/M_AXI"
             ]
           },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
           "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
             ]
           },
-          "xbar_to_m00_couplers": {
+          "m02_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
+              "M02_AXI",
+              "m02_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_m02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
+            ]
+          },
+          "m03_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M03_AXI",
+              "m03_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m03_couplers": {
+            "interface_ports": [
+              "xbar/M03_AXI",
+              "m03_couplers/S_AXI"
             ]
           }
         },
@@ -1660,16 +1661,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1690,16 +1691,16 @@
           }
         },
         "interface_nets": {
-          "axi_mem_intercon_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_axi_mem_intercon": {
             "interface_ports": [
               "M00_AXI",
               "s00_couplers/M_AXI"
+            ]
+          },
+          "axi_mem_intercon_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -1870,7 +1871,7 @@
             "value": "3"
           },
           "C_TRI_DEFAULT": {
-            "value": "0xFFFFFFF9"
+            "value": "0xFFFFFFFF"
           },
           "GPIO_BOARD_INTERFACE": {
             "value": "Custom"
@@ -1879,19 +1880,37 @@
             "value": "true"
           }
         }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "mp0_xlslice_0_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "2"
+          },
+          "DIN_TO": {
+            "value": "1"
+          },
+          "DIN_WIDTH": {
+            "value": "3"
+          },
+          "DOUT_WIDTH": {
+            "value": "2"
+          }
+        }
       }
     },
     "interface_nets": {
+      "ps7_0_axi_periph_M03_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M03_AXI",
+          "axi_gpio_1/S_AXI"
+        ]
+      },
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
           "axi_gpio_0/S_AXI"
-        ]
-      },
-      "axi_vdma_0_M_AXI_MM2S": {
-        "interface_ports": [
-          "axi_vdma_0/M_AXI_MM2S",
-          "axi_mem_intercon/S00_AXI"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -1906,22 +1925,10 @@
           "v_axi4s_vid_out_0/vtiming_in"
         ]
       },
-      "ps7_0_axi_periph_M03_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M03_AXI",
-          "axi_gpio_1/S_AXI"
-        ]
-      },
       "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M01_AXI",
           "axi_vdma_0/S_AXI_LITE"
-        ]
-      },
-      "axi_gpio_0_GPIO2": {
-        "interface_ports": [
-          "sws_8bits_0",
-          "axi_gpio_0/GPIO2"
         ]
       },
       "ps7_0_axi_periph_M02_AXI": {
@@ -1936,10 +1943,22 @@
           "processing_system7_0/FIXED_IO"
         ]
       },
+      "axi_gpio_0_GPIO2": {
+        "interface_ports": [
+          "sws_8bits_0",
+          "axi_gpio_0/GPIO2"
+        ]
+      },
       "axi_gpio_0_GPIO": {
         "interface_ports": [
           "btns_5bits_0",
           "axi_gpio_0/GPIO"
+        ]
+      },
+      "axi_vdma_0_M_AXI_MM2S": {
+        "interface_ports": [
+          "axi_vdma_0/M_AXI_MM2S",
+          "axi_mem_intercon/S00_AXI"
         ]
       },
       "axi_vdma_0_M_AXIS_MM2S": {
@@ -2059,10 +2078,22 @@
           "VGA_VS"
         ]
       },
-      "axi_gpio_1_gpio_io_t": {
+      "axi_gpio_1_gpio_io_o": {
         "ports": [
-          "axi_gpio_1/gpio_io_t",
-          "snes_gpio"
+          "axi_gpio_1/gpio_io_o",
+          "xlslice_0/Din"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "snes_gpio_out"
+        ]
+      },
+      "gpio_io_i_0_1": {
+        "ports": [
+          "snes_gpio_in",
+          "axi_gpio_1/gpio_io_i"
         ]
       }
     },

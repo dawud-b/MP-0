@@ -97,9 +97,9 @@
 # ----------------------------------------------------------------------------
 # JB Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
-set_property PACKAGE_PIN W12 [get_ports {snes_gpio[0]}];  # "JB1"
-set_property PACKAGE_PIN W11 [get_ports {snes_gpio[1]}];  # "JB2"
-set_property PACKAGE_PIN V10 [get_ports {snes_gpio[2]}];  # "JB3"
+set_property PACKAGE_PIN W12 [get_ports {snes_gpio_in[0]}];  # "JB1"
+set_property PACKAGE_PIN W11 [get_ports {snes_gpio_out[0]}];  # "JB2"
+set_property PACKAGE_PIN V10 [get_ports {snes_gpio_out[1]}];  # "JB3"
 # set_property PACKAGE_PIN W8 [get_ports {JB4}];  # "JB4"
 # set_property PACKAGE_PIN V12 [get_ports {JB7}];  # "JB7"
 # set_property PACKAGE_PIN W10 [get_ports {JB8}];  # "JB8"

@@ -31,6 +31,7 @@
 #include "xaxivdma.h"
 #include "mmap.h"
 
+#define USE_SNES_CONTROLLER 1
 
 // Compile-time constants
 #define DEBUG_LEVEL 10

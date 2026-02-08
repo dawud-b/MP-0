@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Sat Feb  7 15:47:07 2026
+| Date             : Sat Feb  7 17:30:40 2026
 | Host             : CO2041-15 running 64-bit major release  (build 9200)
 | Command          : report_power -file mp0_wrapper_power_routed.rpt -pb mp0_wrapper_power_summary_routed.pb -rpx mp0_wrapper_power_routed.rpx
 | Design           : mp0_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.817        |
+| Total On-Chip Power (W)  | 1.816        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.669        |
+| Dynamic (W)              | 1.668        |
 | Device Static (W)        | 0.148        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 64.0         |
-| Junction Temperature (C) | 46.0         |
+| Max Ambient (C)          | 64.1         |
+| Junction Temperature (C) | 45.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |        6 |       --- |             --- |
+| Clocks                   |     0.013 |        6 |       --- |             --- |
 | Slice Logic              |     0.002 |     8214 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     2323 |     53200 |            4.37 |
+|   LUT as Logic           |     0.002 |     2321 |     53200 |            4.36 |
 |   Register               |    <0.001 |     4647 |    106400 |            4.37 |
 |   CARRY4                 |    <0.001 |       90 |     13300 |            0.68 |
 |   F7/F8 Muxes            |    <0.001 |      110 |     53200 |            0.21 |
 |   LUT as Shift Register  |    <0.001 |      129 |     17400 |            0.74 |
 |   Others                 |     0.000 |      411 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |        2 |     17400 |            0.01 |
-| Signals                  |     0.004 |     6130 |       --- |             --- |
+| Signals                  |     0.004 |     6132 |       --- |             --- |
 | Block RAM                |    <0.001 |      2.5 |       140 |            1.79 |
 | MMCM                     |     0.115 |        1 |         4 |           25.00 |
 | I/O                      |    <0.001 |       30 |       200 |           15.00 |
 | PS7                      |     1.533 |        1 |       --- |             --- |
 | Static Power             |     0.148 |          |           |                 |
-| Total                    |     1.817 |          |           |                 |
+| Total                    |     1.816 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -156,8 +156,8 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| mp0_wrapper              |     1.669 |
-|   mp0_i                  |     1.669 |
+| mp0_wrapper              |     1.668 |
+|   mp0_i                  |     1.668 |
 |     axi_vdma_0           |     0.007 |
 |       U0                 |     0.007 |
 |     clk_wiz_0            |     0.115 |
@@ -167,8 +167,8 @@ Table of Contents
 |     ps7_0_axi_periph     |     0.005 |
 |       s00_couplers       |     0.004 |
 |       xbar               |     0.001 |
-|     v_tc_0               |     0.005 |
-|       U0                 |     0.005 |
+|     v_tc_0               |     0.004 |
+|       U0                 |     0.004 |
 +--------------------------+-----------+
 
 

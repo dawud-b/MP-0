@@ -20,6 +20,8 @@
 #include "NESCore/NESCore.h"
 #include <unistd.h>  // for usleep
 
+
+
 // Main function. Performs Xilinx-specific initialization, and then goes into the main polling loop
 int main() {
 
@@ -66,9 +68,10 @@ void nes_load() {
 	int32_t result = 0, i;
 	uint8_t nes_fname[17];
 
-	nes_strncpy(nes_fname, "zelda.nes", 10);
+	//nes_strncpy(nes_fname, "zelda.nes", 10);
+	nes_strncpy(nes_fname, "smario3.nes", 12);
+	//nes_strncpy(nes_fname, "mickeyms.nes", 13);
 
-	usleep(100000);
 
 	if (bootstate.debug_level >= 1)
 		xil_printf("nes_load(): loading %s\r\n", nes_fname);
@@ -117,6 +120,7 @@ void nes_load() {
 
 
 
+
 // Initializes bootloader state, the Xilinx peripherals, and the front buffer
 void xil_init() {
 
@@ -131,12 +135,21 @@ void xil_init() {
 
 	bootstate.debug_level = 1;
 
-    XGpioPs_Config *config;
-    config = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
-    XGpioPs_CfgInitialize(&PSgpio, config, config->BaseAddr);
-    XGpioPs_SetDirection(&PSgpio, 1, 0);
+	if (!USE_SNES_CONTROLLER) {
+		XGpioPs_Config *config;
+    	config = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+    	XGpioPs_CfgInitialize(&PSgpio, config, config->BaseAddr);
+    	XGpioPs_SetDirection(&PSgpio, 1, 0);
 
-    // PL GPIO has a default input state so no need to configure it to input here
+
+    	// PL GPIO has a default input state so no need to configure button d pad here.
+	} else {
+		Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR + 0x4, (0 << 2) | (0 << 1) | (1 << 0)); // 0b001 so output output input
+		Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 0);
+	}
+
+
+
 
 
 	// For now, we disable the DCache as it causes problems with xilsd and vdma

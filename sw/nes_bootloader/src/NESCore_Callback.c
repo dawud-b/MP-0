@@ -74,7 +74,15 @@ typedef enum {
 	BTNU_GPIO = 1 << 4
 } BTN_GPIO;
 
+typedef enum { // bit position
+	SNES_PIN_DATA = 0,
+	SNES_PIN_LATCH = 1,
+	SNES_PIN_CLK = 2
+} SNES_PIN;
+
+#if USE_SNES_CONTROLLER == 0
 static uint32_t old_sel_and_start = 0;
+#endif
 
 // Main input callback. Overwite the passed-by references pad1 and pad2 
 // values, presumably using the buttons and switches on your ZedBoard.
@@ -84,32 +92,76 @@ void NESCore_Callback_InputPadState(dword *pdwPad1, dword *pdwPad2) {
 	//*pdwPad1 = NCTL_A | NCTL_B;
 	*pdwPad2 = 0;
 
+#if USE_SNES_CONTROLLER == 0
+		uint32_t dpad = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0);
+		uint32_t sel_and_start = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0x8);
+		uint32_t psgpiodata = XGpioPs_Read(&PSgpio, 1); // bank 1. MIO50 and MIO51
 
-	uint32_t dpad = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0);
-	uint32_t sel_and_start = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0x8);
-	uint32_t psgpiodata = XGpioPs_Read(&PSgpio, 1); // bank 1. MIO50 and MIO51
+		dword pdwad = 0;
+		if (dpad & BTNU_GPIO)
+			pdwad |= NCTL_UP;
+		if (dpad & BTND_GPIO)
+			pdwad |= NCTL_DOWN;
+		if (dpad & BTNR_GPIO)
+			pdwad |= NCTL_RIGHT;
+		if (dpad & BTNL_GPIO)
+			pdwad |= NCTL_LEFT;
+		if (psgpiodata & (1 << 18))
+			pdwad |= NCTL_A;
+		if (psgpiodata & (1 << 19))
+			pdwad |= NCTL_B;
+		if ((old_sel_and_start & (1 << 1)) ^ (sel_and_start & (1 << 1)))
+			pdwad |= NCTL_SELECT;
+		if ((old_sel_and_start & (1 << 0)) ^ (sel_and_start & (1 << 0)))
+			pdwad |= NCTL_START;
 
-	dword pdwad = 0;
-	if (dpad & BTNU_GPIO)
-		pdwad |= NCTL_UP;
-	if (dpad & BTND_GPIO)
-		pdwad |= NCTL_DOWN;
-	if (dpad & BTNR_GPIO)
-		pdwad |= NCTL_RIGHT;
-	if (dpad & BTNL_GPIO)
-		pdwad |= NCTL_LEFT;
-	if (psgpiodata & (1 << 18))
-		pdwad |= NCTL_A;
-	if (psgpiodata & (1 << 19))
-		pdwad |= NCTL_B;
-	if ((old_sel_and_start & (1 << 1)) ^ (sel_and_start & (1 << 1)))
-		pdwad |= NCTL_SELECT;
-	if ((old_sel_and_start & (1 << 0)) ^ (sel_and_start & (1 << 0)))
-		pdwad |= NCTL_START;
+		*pdwPad1 = pdwad;
 
-	*pdwPad1 = pdwad;
+		old_sel_and_start = sel_and_start;
+#else
+		Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 1 << SNES_PIN_LATCH);
+		dword pdwad = 0;
+		Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 0 << SNES_PIN_LATCH);
 
-	old_sel_and_start = sel_and_start;
+		for (int i = 0; i <= 7; i++) {
+			uint32_t serial_bit = Xil_In32(XPAR_AXI_GPIO_1_BASEADDR) & 1;
+			if (!serial_bit) {
+				switch (i) {
+				case 0:
+					pdwad |= NCTL_B;
+					break;
+				case 1:
+					pdwad |= NCTL_A;
+					break;
+				case 2:
+					pdwad |= NCTL_SELECT;
+					break;
+				case 3:
+					pdwad |= NCTL_START;
+					break;
+				case 4:
+					pdwad |= NCTL_UP;
+					break;
+				case 5:
+					pdwad |= NCTL_DOWN;
+					break;
+				case 6:
+					pdwad |= NCTL_LEFT;
+					break;
+				case 7:
+					pdwad |= NCTL_RIGHT;
+				default:
+					break;
+				}
+			}
+
+			Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 1 << SNES_PIN_CLK);
+			Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 0 << SNES_PIN_CLK);
+		}
+
+		*pdwPad1 = pdwad;
+
+#endif
 
 	return;
 }
