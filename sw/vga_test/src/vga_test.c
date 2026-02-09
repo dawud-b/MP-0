@@ -75,7 +75,7 @@ int main() {
       }
 
     }*/
-
+    
     for (i = 0; i < 480; i++) {
       for (j = 0; j < 640; j++) {
     	if (j == 639 || j == 0) // black 1 pixel border on left and right
@@ -91,32 +91,6 @@ int main() {
         }
       }
 
-    }
-
-   // checkboard
-   int offset = 80;
-   for (int i = 0; i < 480; i++) {
-    	for (int j = 0; j < 640; j++) {
-
-    		if (j < 80)
-    			test_image[i][j] = 0;
-    		else if (j >= 560) {
-    			test_image[i][j] = 0;
-    			continue;
-    		}
-
-    		if ( (i / 60) % 2 == 0) { // even rows
-    			if ((j / 60) % 2 == 0)
-    				test_image[i][j + offset] = ((CARDIN & 0xf00000) >> 12) | ((CARDIN & 0xf000) >> 8) | ((CARDIN & 0xf0) >> 4);
-    			else
-    				test_image[i][j + offset] = ((GOLD & 0xf00000) >> 12) | ((GOLD & 0xf000) >> 8) | ((GOLD & 0xf0) >> 4);
-    		} else { // odd rows
-    			if ((j / 60) % 2 == 0)
-    				test_image[i][j + offset] = ((GOLD & 0xf00000) >> 12) | ((GOLD & 0xf000) >> 8) | ((GOLD & 0xf0) >> 4);
-    			else
-    				test_image[i][j + offset] = ((CARDIN & 0xf00000) >> 12) | ((CARDIN & 0xf000) >> 8) | ((CARDIN & 0xf0) >> 4);
-    		}
-    	}
     }
 
 	// Make sure Display information gets flushed from cache to DDR Memory
