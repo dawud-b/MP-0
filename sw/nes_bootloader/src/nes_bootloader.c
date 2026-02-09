@@ -286,7 +286,7 @@ int menu() {
 	screen_io_clear();
 
 	selection_locations[0] = screen_io_get_char_loc_ptr();
-	screen_io_putc('*');
+	screen_io_putc_color('*', 0xf00);
 	screen_io_print(game_entry);
 
 	for (int i = 1; i < 121; i++) {
@@ -331,7 +331,7 @@ int menu() {
 				game_index++;
 
 			screen_io_set_char_loc_ptr(selection_locations[game_index]);
-			screen_io_putc('*');
+			screen_io_putc_color('*', 0xf00);
 			screen_io_flush();
 			r_clicked = 1;
 		} else if ((dpad & BTNL_GPIO) && !l_clicked) {
@@ -343,7 +343,7 @@ int menu() {
 				game_index--;
 
 			screen_io_set_char_loc_ptr(selection_locations[game_index]);
-			screen_io_putc('*');
+			screen_io_putc_color('*', 0xf00);
 			screen_io_flush();
 			l_clicked = 1;
 		}
@@ -380,7 +380,7 @@ int menu() {
 						game_index--;
 
 					screen_io_set_char_loc_ptr(selection_locations[game_index]);
-					screen_io_putc('*');
+					screen_io_putc_color('*', 0xf00);
 					screen_io_flush();
 					break;
 				case 7:
@@ -396,7 +396,7 @@ int menu() {
 						game_index++;
 
 					screen_io_set_char_loc_ptr(selection_locations[game_index]);
-					screen_io_putc('*');
+					screen_io_putc_color('*', 0xf00);
 					screen_io_flush();
 				default:
 					break;

@@ -76,6 +76,32 @@ void screen_io_putc(char c) {
 
 }
 
+void screen_io_putc_color(char c, uint16_t RGBcolor) {
+	if (c == '\n') {
+		int current_line = ((int) (char_loc_ptr - (uint16_t*) FBUFFER_BASEADDR)) / 640;
+		char_loc_ptr = ((uint16_t*) FBUFFER_BASEADDR) + (current_line + 21) * 640;
+		if (current_line + 21 >= 480 - 21)
+			char_loc_ptr = FBUFFER_BASEADDR;
+		return;
+	}
+
+	int font_char_idx = c - ' '; // starts at <SPACE>
+
+	for (int i = 0; i < 21; i++) {
+		for (int j = 0; j < 13; j++) {
+			char_loc_ptr[i * 640 + j] = ~font_characters[font_char_idx][i][j] & RGBcolor;
+		}
+	}
+
+	if ((int) (char_loc_ptr - (uint16_t*) FBUFFER_BASEADDR) % 640 >= 640 - 2*13) { // need to go to new line
+		int current_line = ((int) (char_loc_ptr - (uint16_t*) FBUFFER_BASEADDR)) / 640;
+		char_loc_ptr = &((uint16_t*) FBUFFER_BASEADDR)[(current_line + 21) * 640];
+		if (current_line + 21 >= 480 - 21)
+			char_loc_ptr = FBUFFER_BASEADDR;
+	} else
+		char_loc_ptr += 13;
+}
+
 void screen_io_print(char* str) {
 	while (*str) {
 		screen_io_putc(*str);
