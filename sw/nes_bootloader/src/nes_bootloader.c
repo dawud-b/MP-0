@@ -217,15 +217,23 @@ void xil_init() {
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, 640*2);  // Read Channel: VDMA MM2S HSIZE
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, 480);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
 
-    //screen_io_init();
-    //menu();
-    //while (1);
+    screen_io_init();
+    menu();
+    while (1);
 
   	return;
 }
 
-void menu() {
+typedef enum {
+	BTNC_GPIO = 1 << 0,
+	BTND_GPIO = 1 << 1,
+	BTNL_GPIO = 1 << 2,
+	BTNR_GPIO = 1 << 3,
+	BTNU_GPIO = 1 << 4
+} BTN_GPIO;
 
+int menu() {
+	uint16_t* selection_locations[121] = {0};
 	FIL* dbfile;
 	xilsd_fopen(dbfile, "rominfo.db");
 	char game_entry[85];
@@ -236,22 +244,68 @@ void menu() {
 			game_entry[i] = '\0';
 		}
 	}
+	selection_locations[0] = screen_io_get_char_loc_ptr();
 	screen_io_putc('*');
 	screen_io_print(game_entry);
 
-	for (int i = 0; i < 120; i++) {
+	for (int i = 1; i < 121; i++) {
 		xilsd_fread(game_entry, 1, 82, dbfile);
 		for (int i = 0; i < 84; i++) {
 			if (game_entry[i] == ';') {
 				game_entry[i] = '\0';
 			}
 		}
+		selection_locations[i] = screen_io_get_char_loc_ptr();
 		screen_io_putc('_');
 		screen_io_print(game_entry);
 	}
 
 	xilsd_fclose(dbfile);
 	screen_io_flush();
+
+	int r_clicked = 0; // this distinction may be nice for if your spamming left and right together
+	int l_clicked = 0;
+	int game_index = 0;
+	while (1) {
+		uint32_t dpad = Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + 0);
+		if (r_clicked && !((dpad & BTNR_GPIO))) {
+			r_clicked = 0;
+		}
+		if (l_clicked && !((dpad & BTNL_GPIO))) {
+			l_clicked = 0;
+		}
+		if (dpad & BTNC_GPIO)
+			return game_index;
+
+		if ((dpad & BTNR_GPIO) && !r_clicked) {
+			screen_io_set_char_loc_ptr(selection_locations[game_index]);
+			screen_io_putc('_');
+			if (game_index >= 120)
+				game_index = 0;
+			else
+				game_index++;
+
+			screen_io_set_char_loc_ptr(selection_locations[game_index]);
+			screen_io_putc('*');
+			screen_io_flush();
+			r_clicked = 1;
+		} else if ((dpad & BTNL_GPIO) && !l_clicked) {
+			screen_io_set_char_loc_ptr(selection_locations[game_index]);
+			screen_io_putc('_');
+			if (game_index == 0)
+				game_index = 120;
+			else
+				game_index--;
+
+			screen_io_set_char_loc_ptr(selection_locations[game_index]);
+			screen_io_putc('*');
+			screen_io_flush();
+			l_clicked = 1;
+		}
+
+		usleep(15000); // for debouncing
+
+	}
 
 }
 

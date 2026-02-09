@@ -83,6 +83,14 @@ void screen_io_print(char* str) {
 	}
 }
 
+uint16_t* screen_io_get_char_loc_ptr() {
+	return char_loc_ptr;
+}
+
+void screen_io_set_char_loc_ptr(uint16_t* ptr) {
+	char_loc_ptr = ptr;
+}
+
 void screen_io_clear() {
 	for (int i = 0; i < 460*480; i++)
 		((uint16_t*) FBUFFER_BASEADDR)[i] = 0;
