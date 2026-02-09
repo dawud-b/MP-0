@@ -57,6 +57,7 @@ int main() {
     return;*/
     // Main polling loop. For now, you can hard-code the .nes ROM you would like to load.
     // Later, improve the code to have user-specified entry and exit options
+
 	while (1) {
 		nes_load();
 	}
@@ -76,9 +77,8 @@ void nes_load() {
 	//nes_strncpy(nes_fname, "zelda.nes", 10);
 	//nes_strncpy(nes_fname, "smario3.nes", 12);
 	//nes_strncpy(nes_fname, "mickeyms.nes", 13);
-
+	Xil_DCacheDisable(); // menu and name_from_game_idx both use xilsd
 	int game_idx = menu();
-	while (1);
 	name_from_game_idx(nes_fname, game_idx);
 
 
@@ -88,7 +88,7 @@ void nes_load() {
 	xil_printf("wav baseaddr: %p\r\n", WAV_BASEADDR);
 
 	// Disable the cache so it will play nice with xilsd (needed here)
-	Xil_DCacheDisable();
+	//Xil_DCacheDisable();
 	result = NESCore_LoadROM(nes_fname);
 	if (result != 0) {
 		xil_printf("nes_load(): invalid ROM load. Returning\r\n");
@@ -118,8 +118,10 @@ void nes_load() {
 			NESCore_Cycle();
 		}
 
-		if (exit_game)
+		if (__builtin_expect(!!(exit_game), 0)) { // mark this as an unlikely path. Don't waste performance on this rare condition
+			exit_game = 0;
 			break;
+		}
 
 	} while (1);
 
@@ -236,8 +238,14 @@ typedef enum {
 	BTNU_GPIO = 1 << 4
 } BTN_GPIO;
 
+typedef enum { // bit position
+	SNES_PIN_DATA = 0,
+	SNES_PIN_LATCH = 1,
+	SNES_PIN_CLK = 2
+} SNES_PIN;
+
 void name_from_game_idx(char* str_buf, int game_idx) {
-	FIL* dbfile;
+	FIL* dbfile = NULL;
 	xilsd_fopen(dbfile, "rominfo.db");
 	char game_entry[85];
 	for (int i = 0; i < game_idx; i++) {
@@ -263,9 +271,8 @@ void name_from_game_idx(char* str_buf, int game_idx) {
 }
 
 int menu() {
-	Xil_DCacheDisable();
 	uint16_t* selection_locations[121] = {0};
-	FIL* dbfile;
+	FIL* dbfile = NULL;
 	xilsd_fopen(dbfile, "rominfo.db");
 	char game_entry[85];
 	xilsd_fread(game_entry, 1, 82, dbfile);
@@ -275,6 +282,9 @@ int menu() {
 			game_entry[i] = '\0';
 		}
 	}
+
+	screen_io_clear();
+
 	selection_locations[0] = screen_io_get_char_loc_ptr();
 	screen_io_putc('*');
 	screen_io_print(game_entry);
@@ -294,6 +304,7 @@ int menu() {
 	xilsd_fclose(dbfile);
 	screen_io_flush();
 
+#if USE_SNES_CONTROLLER == 0
 	int r_clicked = 0; // this distinction may be nice for if your spamming left and right together
 	int l_clicked = 0;
 	int game_index = 0;
@@ -306,7 +317,8 @@ int menu() {
 			l_clicked = 0;
 		}
 		if (dpad & BTNC_GPIO) {
-			Xil_DCacheEnable();
+			screen_io_clear();
+			screen_io_flush();
 			return game_index;
 		}
 
@@ -336,10 +348,74 @@ int menu() {
 			l_clicked = 1;
 		}
 
-		usleep(15000); // for debouncing
+		usleep(20000); // for debouncing
+	}
+#else
+	int game_index = 0;
+	int r_clicked = 0;
+	int l_clicked = 0;
+	while (1) {
+		Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 1 << SNES_PIN_LATCH);
+		Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 0 << SNES_PIN_LATCH);
+		int r_just_clicked = 0;
+		int l_just_clicked = 0;
+		for (int i = 0; i <= 7; i++) {
+			uint32_t serial_bit = Xil_In32(XPAR_AXI_GPIO_1_BASEADDR) & 1;
+			if (!serial_bit) {
+				switch (i) {
+				case 2:
+					screen_io_clear();
+					screen_io_flush();
+					return game_index;
+				case 6:
+					l_just_clicked = 1;
+					if (l_clicked)
+						break;
+					l_clicked = 1;
+					screen_io_set_char_loc_ptr(selection_locations[game_index]);
+					screen_io_putc('_');
+					if (game_index == 0)
+						game_index = 120;
+					else
+						game_index--;
 
+					screen_io_set_char_loc_ptr(selection_locations[game_index]);
+					screen_io_putc('*');
+					screen_io_flush();
+					break;
+				case 7:
+					r_just_clicked = 1;
+					if (r_clicked)
+						break;
+					r_clicked = 1;
+					screen_io_set_char_loc_ptr(selection_locations[game_index]);
+					screen_io_putc('_');
+					if (game_index >= 120)
+						game_index = 0;
+					else
+						game_index++;
+
+					screen_io_set_char_loc_ptr(selection_locations[game_index]);
+					screen_io_putc('*');
+					screen_io_flush();
+				default:
+					break;
+				}
+			}
+
+			Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 1 << SNES_PIN_CLK);
+			Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR, 0 << SNES_PIN_CLK);
+		}
+		if (l_clicked && !l_just_clicked)
+			l_clicked = 0;
+
+		if (r_clicked && !r_just_clicked)
+			r_clicked = 0;
+
+		usleep(20000);
 	}
 
+#endif
 	return 0;
 }
 

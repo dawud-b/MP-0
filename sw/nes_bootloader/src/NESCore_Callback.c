@@ -25,7 +25,6 @@
 // Note that the NES (and the emulator) outputs essentially a 256x240 image.
 // Your challenge is to figure out how to map that to your 640x480 framebuffer.
 void NESCore_Callback_OutputFrame(word *WorkFrame) {
-
 	extern uint16_t NesPalette3_RGB[];
 	uint32_t i, j;
 	uint16_t *ptr = (uint16_t *)FBUFFER_BASEADDR;

@@ -92,7 +92,7 @@ void screen_io_set_char_loc_ptr(uint16_t* ptr) {
 }
 
 void screen_io_clear() {
-	for (int i = 0; i < 460*480; i++)
+	for (int i = 0; i < 480*640; i++)
 		((uint16_t*) FBUFFER_BASEADDR)[i] = 0;
 
 	char_loc_ptr = FBUFFER_BASEADDR;
