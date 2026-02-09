@@ -21,7 +21,9 @@
 #include <unistd.h>  // for usleep
 #include "screen_io.h"
 
-
+char exit_game = 0;
+void name_from_game_idx(char* str_buf, int game_idx);
+int menu();
 
 // Main function. Performs Xilinx-specific initialization, and then goes into the main polling loop
 int main() {
@@ -61,7 +63,7 @@ int main() {
 
 }
 
-char exit_game = 0;
+
 
 // Runs the main NES emulation
 void nes_load() {
@@ -69,9 +71,15 @@ void nes_load() {
 	int32_t result = 0, i;
 	uint8_t nes_fname[17];
 
+
+
 	//nes_strncpy(nes_fname, "zelda.nes", 10);
-	nes_strncpy(nes_fname, "smario3.nes", 12);
+	//nes_strncpy(nes_fname, "smario3.nes", 12);
 	//nes_strncpy(nes_fname, "mickeyms.nes", 13);
+
+	int game_idx = menu();
+	while (1);
+	name_from_game_idx(nes_fname, game_idx);
 
 
 	if (bootstate.debug_level >= 1)
@@ -125,8 +133,6 @@ void nes_load() {
 
 }
 
-
-void menu();
 
 
 // Initializes bootloader state, the Xilinx peripherals, and the front buffer
@@ -218,8 +224,6 @@ void xil_init() {
     XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, 480);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
 
     screen_io_init();
-    menu();
-    while (1);
 
   	return;
 }
@@ -232,7 +236,34 @@ typedef enum {
 	BTNU_GPIO = 1 << 4
 } BTN_GPIO;
 
+void name_from_game_idx(char* str_buf, int game_idx) {
+	FIL* dbfile;
+	xilsd_fopen(dbfile, "rominfo.db");
+	char game_entry[85];
+	for (int i = 0; i < game_idx; i++) {
+		xilsd_fread(game_entry, 1, 82, dbfile);
+	}
+
+	xilsd_fread(game_entry, 1, 82, dbfile);
+	xilsd_fclose(dbfile);
+
+	for (int i = 0; i < 85; i++) {
+		if (game_entry[i] == ';') {
+			str_buf[i] = '.';
+			str_buf[i + 1] = 'n';
+			str_buf[i + 2] = 'e';
+			str_buf[i + 3] = 's';
+			str_buf[i + 4] = '\0';
+			break;
+		}
+
+		str_buf[i] = game_entry[i];
+	}
+
+}
+
 int menu() {
+	Xil_DCacheDisable();
 	uint16_t* selection_locations[121] = {0};
 	FIL* dbfile;
 	xilsd_fopen(dbfile, "rominfo.db");
@@ -274,8 +305,10 @@ int menu() {
 		if (l_clicked && !((dpad & BTNL_GPIO))) {
 			l_clicked = 0;
 		}
-		if (dpad & BTNC_GPIO)
+		if (dpad & BTNC_GPIO) {
+			Xil_DCacheEnable();
 			return game_index;
+		}
 
 		if ((dpad & BTNR_GPIO) && !r_clicked) {
 			screen_io_set_char_loc_ptr(selection_locations[game_index]);
@@ -307,5 +340,6 @@ int menu() {
 
 	}
 
+	return 0;
 }
 
